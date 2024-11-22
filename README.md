@@ -218,6 +218,3 @@ Purpose: Plays the background music when the game is started.
 Stops background music when the game is over.
 Purpose: Stop the Background music when the game ends.
 Purpose: Initialize and start the game directly when page load by calling the function startGame().
-
-Conclusion :
-This Fruit Slicing Game is a simple game that can be experienced through HTML, CSS, and JavaScript. The game holds the very basic functionality within fruit slicing, tracking the score, and having a countdown timer. It can easily be improved by implementing more features such as difficulty levels, fruits, and animations.
