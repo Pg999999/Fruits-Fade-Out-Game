@@ -1,220 +1,221 @@
-Technical Documentation: Fruit Fade Out Game using HTML 
-Summary :
-Fruit Fade Out Game is a browser game where the player clicks on the randomly generated fruits to slice them. The game has a timer that runs down from 30 seconds, and the score of the player increases as he slices fruit after fruit. Upon completion of the time, the game ends and presents the score of the player, and there will be an option to rest the game.
+𝐓𝐞𝐜𝐡𝐧𝐢𝐜𝐚𝐥 𝐃𝐨𝐜𝐮𝐦𝐞𝐧𝐭𝐚𝐭𝐢𝐨𝐧﹕ 𝐅𝐫𝐮𝐢𝐭 𝐅𝐚𝐝𝐞 𝐎𝐮𝐭 𝐆𝐚𝐦𝐞 𝐮𝐬𝐢𝐧𝐠 𝐇𝐓𝐌𝐋 
 
-This documentation explains the structure and workings of the HTML code as well as details regarding the related resources such as CSS, JavaScript, and audio.
+𝐒𝐮𝐦𝐦𝐚𝐫𝐲 ﹕
+𝐅𝐫𝐮𝐢𝐭 𝐅𝐚𝐝𝐞 𝐎𝐮𝐭 𝐆𝐚𝐦𝐞 𝐢𝐬 𝐚 𝐛𝐫𝐨𝐰𝐬𝐞𝐫 𝐠𝐚𝐦𝐞 𝐰𝐡𝐞𝐫𝐞 𝐭𝐡𝐞 𝐩𝐥𝐚𝐲𝐞𝐫 𝐜𝐥𝐢𝐜𝐤𝐬 𝐨𝐧 𝐭𝐡𝐞 𝐫𝐚𝐧𝐝𝐨𝐦𝐥𝐲 𝐠𝐞𝐧𝐞𝐫𝐚𝐭𝐞𝐝 𝐟𝐫𝐮𝐢𝐭𝐬 𝐭𝐨 𝐬𝐥𝐢𝐜𝐞 𝐭𝐡𝐞𝐦. 𝐓𝐡𝐞 𝐠𝐚𝐦𝐞 𝐡𝐚𝐬 𝐚 𝐭𝐢𝐦𝐞𝐫 𝐭𝐡𝐚𝐭 𝐫𝐮𝐧𝐬 𝐝𝐨𝐰𝐧 𝐟𝐫𝐨𝐦 𝟑𝟎 𝐬𝐞𝐜𝐨𝐧𝐝𝐬, 𝐚𝐧𝐝 𝐭𝐡𝐞 𝐬𝐜𝐨𝐫𝐞 𝐨𝐟 𝐭𝐡𝐞 𝐩𝐥𝐚𝐲𝐞𝐫 𝐢𝐧𝐜𝐫𝐞𝐚𝐬𝐞𝐬 𝐚𝐬 𝐡𝐞 𝐬𝐥𝐢𝐜𝐞𝐬 𝐟𝐫𝐮𝐢𝐭 𝐚𝐟𝐭𝐞𝐫 𝐟𝐫𝐮𝐢𝐭. 𝐔𝐩𝐨𝐧 𝐜𝐨𝐦𝐩𝐥𝐞𝐭𝐢𝐨𝐧 𝐨𝐟 𝐭𝐡𝐞 𝐭𝐢𝐦𝐞, 𝐭𝐡𝐞 𝐠𝐚𝐦𝐞 𝐞𝐧𝐝𝐬 𝐚𝐧𝐝 𝐩𝐫𝐞𝐬𝐞𝐧𝐭𝐬 𝐭𝐡𝐞 𝐬𝐜𝐨𝐫𝐞 𝐨𝐟 𝐭𝐡𝐞 𝐩𝐥𝐚𝐲𝐞𝐫, 𝐚𝐧𝐝 𝐭𝐡𝐞𝐫𝐞 𝐰𝐢𝐥𝐥 𝐛𝐞 𝐚𝐧 𝐨𝐩𝐭𝐢𝐨𝐧 𝐭𝐨 𝐫𝐞𝐬𝐭 𝐭𝐡𝐞 𝐠𝐚𝐦𝐞.
 
-1. HTML Structure ->
+𝐓𝐡𝐢𝐬 𝐝𝐨𝐜𝐮𝐦𝐞𝐧𝐭𝐚𝐭𝐢𝐨𝐧 𝐞𝐱𝐩𝐥𝐚𝐢𝐧𝐬 𝐭𝐡𝐞 𝐬𝐭𝐫𝐮𝐜𝐭𝐮𝐫𝐞 𝐚𝐧𝐝 𝐰𝐨𝐫𝐤𝐢𝐧𝐠𝐬 𝐨𝐟 𝐭𝐡𝐞 𝐇𝐓𝐌𝐋 𝐜𝐨𝐝𝐞 𝐚𝐬 𝐰𝐞𝐥𝐥 𝐚𝐬 𝐝𝐞𝐭𝐚𝐢𝐥𝐬 𝐫𝐞𝐠𝐚𝐫𝐝𝐢𝐧𝐠 𝐭𝐡𝐞 𝐫𝐞𝐥𝐚𝐭𝐞𝐝 𝐫𝐞𝐬𝐨𝐮𝐫𝐜𝐞𝐬 𝐬𝐮𝐜𝐡 𝐚𝐬 𝐂𝐒𝐒, 𝐉𝐚𝐯𝐚𝐒𝐜𝐫𝐢𝐩𝐭, 𝐚𝐧𝐝 𝐚𝐮𝐝𝐢𝐨.
 
-The HTML file outlines the main structure of the game user interface together with its connections to all external resources outside of this document, including stylesheets and scripts.
+𝟏. 𝐇𝐓𝐌𝐋 𝐒𝐭𝐫𝐮𝐜𝐭𝐮𝐫𝐞 
 
-<title></title>: Sets the page title which displays when opened in the browser.
+𝐓𝐡𝐞 𝐇𝐓𝐌𝐋 𝐟𝐢𝐥𝐞 𝐨𝐮𝐭𝐥𝐢𝐧𝐞𝐬 𝐭𝐡𝐞 𝐦𝐚𝐢𝐧 𝐬𝐭𝐫𝐮𝐜𝐭𝐮𝐫𝐞 𝐨𝐟 𝐭𝐡𝐞 𝐠𝐚𝐦𝐞 𝐮𝐬𝐞𝐫 𝐢𝐧𝐭𝐞𝐫𝐟𝐚𝐜𝐞 𝐭𝐨𝐠𝐞𝐭𝐡𝐞𝐫 𝐰𝐢𝐭𝐡 𝐢𝐭𝐬 𝐜𝐨𝐧𝐧𝐞𝐜𝐭𝐢𝐨𝐧𝐬 𝐭𝐨 𝐚𝐥𝐥 𝐞𝐱𝐭𝐞𝐫𝐧𝐚𝐥 𝐫𝐞𝐬𝐨𝐮𝐫𝐜𝐞𝐬 𝐨𝐮𝐭𝐬𝐢𝐝𝐞 𝐨𝐟 𝐭𝐡𝐢𝐬 𝐝𝐨𝐜𝐮𝐦𝐞𝐧𝐭, 𝐢𝐧𝐜𝐥𝐮𝐝𝐢𝐧𝐠 𝐬𝐭𝐲𝐥𝐞𝐬𝐡𝐞𝐞𝐭𝐬 𝐚𝐧𝐝 𝐬𝐜𝐫𝐢𝐩𝐭𝐬.
 
-<link rel="stylesheet" href="style.css"></link>: Links an external stylesheet (style.css) for the game interface styling.
+<𝐭𝐢𝐭𝐥𝐞></𝐭𝐢𝐭𝐥𝐞>﹕ 𝐒𝐞𝐭𝐬 𝐭𝐡𝐞 𝐩𝐚𝐠𝐞 𝐭𝐢𝐭𝐥𝐞 𝐰𝐡𝐢𝐜𝐡 𝐝𝐢𝐬𝐩𝐥𝐚𝐲𝐬 𝐰𝐡𝐞𝐧 𝐨𝐩𝐞𝐧𝐞𝐝 𝐢𝐧 𝐭𝐡𝐞 𝐛𝐫𝐨𝐰𝐬𝐞𝐫.
 
-This is the main content of the webpage, comprising:
+<𝐥𝐢𝐧𝐤 𝐫𝐞𝐥⁼"𝐬𝐭𝐲𝐥𝐞𝐬𝐡𝐞𝐞𝐭" 𝐡𝐫𝐞𝐟⁼"𝐬𝐭𝐲𝐥𝐞.𝐜𝐬𝐬"></𝐥𝐢𝐧𝐤>﹕ 𝐋𝐢𝐧𝐤𝐬 𝐚𝐧 𝐞𝐱𝐭𝐞𝐫𝐧𝐚𝐥 𝐬𝐭𝐲𝐥𝐞𝐬𝐡𝐞𝐞𝐭 ⁽𝐬𝐭𝐲𝐥𝐞.𝐜𝐬𝐬⁾ 𝐟𝐨𝐫 𝐭𝐡𝐞 𝐠𝐚𝐦𝐞 𝐢𝐧𝐭𝐞𝐫𝐟𝐚𝐜𝐞 𝐬𝐭𝐲𝐥𝐢𝐧𝐠.
 
-center": The <center> tag centers the content of the game, though it is deprecated in modern HTML. It's better to use CSS for centering.
+𝐓𝐡𝐢𝐬 𝐢𝐬 𝐭𝐡𝐞 𝐦𝐚𝐢𝐧 𝐜𝐨𝐧𝐭𝐞𝐧𝐭 𝐨𝐟 𝐭𝐡𝐞 𝐰𝐞𝐛𝐩𝐚𝐠𝐞, 𝐜𝐨𝐦𝐩𝐫𝐢𝐬𝐢𝐧𝐠﹕
 
-<div id="gameArea">: This is the main container for game elements. Inside it are several child elements:
+𝐜𝐞𝐧𝐭𝐞𝐫"﹕ 𝐓𝐡𝐞 <𝐜𝐞𝐧𝐭𝐞𝐫> 𝐭𝐚𝐠 𝐜𝐞𝐧𝐭𝐞𝐫𝐬 𝐭𝐡𝐞 𝐜𝐨𝐧𝐭𝐞𝐧𝐭 𝐨𝐟 𝐭𝐡𝐞 𝐠𝐚𝐦𝐞, 𝐭𝐡𝐨𝐮𝐠𝐡 𝐢𝐭 𝐢𝐬 𝐝𝐞𝐩𝐫𝐞𝐜𝐚𝐭𝐞𝐝 𝐢𝐧 𝐦𝐨𝐝𝐞𝐫𝐧 𝐇𝐓𝐌𝐋. 𝐈𝐭'𝐬 𝐛𝐞𝐭𝐭𝐞𝐫 𝐭𝐨 𝐮𝐬𝐞 𝐂𝐒𝐒 𝐟𝐨𝐫 𝐜𝐞𝐧𝐭𝐞𝐫𝐢𝐧𝐠.
 
-<h1>: Presentation of the title of the game ("Fruit Fade Out").
-: Dispalys the player's current score. The text will be updated dynamically as soon as the player slices fruits and will start from "Score: 0".
-<div id="timer">: Calculates and displays the remaining time, which starts at 30 seconds. This value will be updated dynamically.
-<div id="fruits">: This is a container in which the fruit elements will be placed. Fruits will be added to and removed from it dynamically during gameplay.
-<div id="endGame" class="hidden">: Contains the game-over message and final score. Initially, it is hidden using the hidden class, which is toggled when the game ends. It includes a button to restart the game.
-Audio Elements:
-<audio id="sliceSound" src="slice.mp3" preload="auto"></audio>: Defines an audio element that plays a slicing sound when the player clicks on a fruit. It is preloaded for faster playback.
-<audio id="backgroundMusic"src="background.mp3" loop="true" preload="auto"></audio>: Creates an audio element for background music. The loop="true" ensures that it continues running in the background throughout the game. It is auto -preload to prevent a delay when starting the game.
-<script src="logic.js"></script>: Imports an external JavaScript file (logic.js), which has the game logic to control fruit generation, slicing, score update, and countdown timer.
+<𝐝𝐢𝐯 𝐢𝐝⁼"𝐠𝐚𝐦𝐞𝐀𝐫𝐞𝐚">﹕ 𝐓𝐡𝐢𝐬 𝐢𝐬 𝐭𝐡𝐞 𝐦𝐚𝐢𝐧 𝐜𝐨𝐧𝐭𝐚𝐢𝐧𝐞𝐫 𝐟𝐨𝐫 𝐠𝐚𝐦𝐞 𝐞𝐥𝐞𝐦𝐞𝐧𝐭𝐬. 𝐈𝐧𝐬𝐢𝐝𝐞 𝐢𝐭 𝐚𝐫𝐞 𝐬𝐞𝐯𝐞𝐫𝐚𝐥 𝐜𝐡𝐢𝐥𝐝 𝐞𝐥𝐞𝐦𝐞𝐧𝐭𝐬﹕
 
-2. Structure and Game Flow
-2.1 Score Display
-The score is initialized to 0 in the <div id="score"> tags.
-As the player cuts fruits, the score is updated dynamically via JavaScript.
-2.2 Timer Display
-The timer starts at 30 seconds in the game. The timer counter is displayed in the <div id="timer"> tags and updates every second
-After the timer counts to zero, the game will display a "Game Over" screen; the final score will be displayed on the screen.
-2.3 Fruit Generation
-The fruits will randomly be generated within the the <div id="fruits"> container with JavaScript. Each fruit is a clickable element with which the player can interact.
-2.4 End Game Section
-When the countdown timer has counted down to zero, it will pause the game and reveal the endGame section. This section will contain the message "Game Over!" as well as the user's final score.
-The player can resume the game by using the "Restart" button, which activates the restartGame() function in the JavaScript file.
+<𝐡𝟏>﹕ 𝐏𝐫𝐞𝐬𝐞𝐧𝐭𝐚𝐭𝐢𝐨𝐧 𝐨𝐟 𝐭𝐡𝐞 𝐭𝐢𝐭𝐥𝐞 𝐨𝐟 𝐭𝐡𝐞 𝐠𝐚𝐦𝐞 ⁽"𝐅𝐫𝐮𝐢𝐭 𝐅𝐚𝐝𝐞 𝐎𝐮𝐭"⁾.
+﹕ 𝐃𝐢𝐬𝐩𝐚𝐥𝐲𝐬 𝐭𝐡𝐞 𝐩𝐥𝐚𝐲𝐞𝐫'𝐬 𝐜𝐮𝐫𝐫𝐞𝐧𝐭 𝐬𝐜𝐨𝐫𝐞. 𝐓𝐡𝐞 𝐭𝐞𝐱𝐭 𝐰𝐢𝐥𝐥 𝐛𝐞 𝐮𝐩𝐝𝐚𝐭𝐞𝐝 𝐝𝐲𝐧𝐚𝐦𝐢𝐜𝐚𝐥𝐥𝐲 𝐚𝐬 𝐬𝐨𝐨𝐧 𝐚𝐬 𝐭𝐡𝐞 𝐩𝐥𝐚𝐲𝐞𝐫 𝐬𝐥𝐢𝐜𝐞𝐬 𝐟𝐫𝐮𝐢𝐭𝐬 𝐚𝐧𝐝 𝐰𝐢𝐥𝐥 𝐬𝐭𝐚𝐫𝐭 𝐟𝐫𝐨𝐦 "𝐒𝐜𝐨𝐫𝐞﹕ 𝟎".
+<𝐝𝐢𝐯 𝐢𝐝⁼"𝐭𝐢𝐦𝐞𝐫">﹕ 𝐂𝐚𝐥𝐜𝐮𝐥𝐚𝐭𝐞𝐬 𝐚𝐧𝐝 𝐝𝐢𝐬𝐩𝐥𝐚𝐲𝐬 𝐭𝐡𝐞 𝐫𝐞𝐦𝐚𝐢𝐧𝐢𝐧𝐠 𝐭𝐢𝐦𝐞, 𝐰𝐡𝐢𝐜𝐡 𝐬𝐭𝐚𝐫𝐭𝐬 𝐚𝐭 𝟑𝟎 𝐬𝐞𝐜𝐨𝐧𝐝𝐬. 𝐓𝐡𝐢𝐬 𝐯𝐚𝐥𝐮𝐞 𝐰𝐢𝐥𝐥 𝐛𝐞 𝐮𝐩𝐝𝐚𝐭𝐞𝐝 𝐝𝐲𝐧𝐚𝐦𝐢𝐜𝐚𝐥𝐥𝐲.
+<𝐝𝐢𝐯 𝐢𝐝⁼"𝐟𝐫𝐮𝐢𝐭𝐬">﹕ 𝐓𝐡𝐢𝐬 𝐢𝐬 𝐚 𝐜𝐨𝐧𝐭𝐚𝐢𝐧𝐞𝐫 𝐢𝐧 𝐰𝐡𝐢𝐜𝐡 𝐭𝐡𝐞 𝐟𝐫𝐮𝐢𝐭 𝐞𝐥𝐞𝐦𝐞𝐧𝐭𝐬 𝐰𝐢𝐥𝐥 𝐛𝐞 𝐩𝐥𝐚𝐜𝐞𝐝. 𝐅𝐫𝐮𝐢𝐭𝐬 𝐰𝐢𝐥𝐥 𝐛𝐞 𝐚𝐝𝐝𝐞𝐝 𝐭𝐨 𝐚𝐧𝐝 𝐫𝐞𝐦𝐨𝐯𝐞𝐝 𝐟𝐫𝐨𝐦 𝐢𝐭 𝐝𝐲𝐧𝐚𝐦𝐢𝐜𝐚𝐥𝐥𝐲 𝐝𝐮𝐫𝐢𝐧𝐠 𝐠𝐚𝐦𝐞𝐩𝐥𝐚𝐲.
+<𝐝𝐢𝐯 𝐢𝐝⁼"𝐞𝐧𝐝𝐆𝐚𝐦𝐞" 𝐜𝐥𝐚𝐬𝐬⁼"𝐡𝐢𝐝𝐝𝐞𝐧">﹕ 𝐂𝐨𝐧𝐭𝐚𝐢𝐧𝐬 𝐭𝐡𝐞 𝐠𝐚𝐦𝐞⁻𝐨𝐯𝐞𝐫 𝐦𝐞𝐬𝐬𝐚𝐠𝐞 𝐚𝐧𝐝 𝐟𝐢𝐧𝐚𝐥 𝐬𝐜𝐨𝐫𝐞. 𝐈𝐧𝐢𝐭𝐢𝐚𝐥𝐥𝐲, 𝐢𝐭 𝐢𝐬 𝐡𝐢𝐝𝐝𝐞𝐧 𝐮𝐬𝐢𝐧𝐠 𝐭𝐡𝐞 𝐡𝐢𝐝𝐝𝐞𝐧 𝐜𝐥𝐚𝐬𝐬, 𝐰𝐡𝐢𝐜𝐡 𝐢𝐬 𝐭𝐨𝐠𝐠𝐥𝐞𝐝 𝐰𝐡𝐞𝐧 𝐭𝐡𝐞 𝐠𝐚𝐦𝐞 𝐞𝐧𝐝𝐬. 𝐈𝐭 𝐢𝐧𝐜𝐥𝐮𝐝𝐞𝐬 𝐚 𝐛𝐮𝐭𝐭𝐨𝐧 𝐭𝐨 𝐫𝐞𝐬𝐭𝐚𝐫𝐭 𝐭𝐡𝐞 𝐠𝐚𝐦𝐞.
+𝐀𝐮𝐝𝐢𝐨 𝐄𝐥𝐞𝐦𝐞𝐧𝐭𝐬﹕
+<𝐚𝐮𝐝𝐢𝐨 𝐢𝐝⁼"𝐬𝐥𝐢𝐜𝐞𝐒𝐨𝐮𝐧𝐝" 𝐬𝐫𝐜⁼"𝐬𝐥𝐢𝐜𝐞.𝐦𝐩𝟑" 𝐩𝐫𝐞𝐥𝐨𝐚𝐝⁼"𝐚𝐮𝐭𝐨"></𝐚𝐮𝐝𝐢𝐨>﹕ 𝐃𝐞𝐟𝐢𝐧𝐞𝐬 𝐚𝐧 𝐚𝐮𝐝𝐢𝐨 𝐞𝐥𝐞𝐦𝐞𝐧𝐭 𝐭𝐡𝐚𝐭 𝐩𝐥𝐚𝐲𝐬 𝐚 𝐬𝐥𝐢𝐜𝐢𝐧𝐠 𝐬𝐨𝐮𝐧𝐝 𝐰𝐡𝐞𝐧 𝐭𝐡𝐞 𝐩𝐥𝐚𝐲𝐞𝐫 𝐜𝐥𝐢𝐜𝐤𝐬 𝐨𝐧 𝐚 𝐟𝐫𝐮𝐢𝐭. 𝐈𝐭 𝐢𝐬 𝐩𝐫𝐞𝐥𝐨𝐚𝐝𝐞𝐝 𝐟𝐨𝐫 𝐟𝐚𝐬𝐭𝐞𝐫 𝐩𝐥𝐚𝐲𝐛𝐚𝐜𝐤.
+<𝐚𝐮𝐝𝐢𝐨 𝐢𝐝⁼"𝐛𝐚𝐜𝐤𝐠𝐫𝐨𝐮𝐧𝐝𝐌𝐮𝐬𝐢𝐜"𝐬𝐫𝐜⁼"𝐛𝐚𝐜𝐤𝐠𝐫𝐨𝐮𝐧𝐝.𝐦𝐩𝟑" 𝐥𝐨𝐨𝐩⁼"𝐭𝐫𝐮𝐞" 𝐩𝐫𝐞𝐥𝐨𝐚𝐝⁼"𝐚𝐮𝐭𝐨"></𝐚𝐮𝐝𝐢𝐨>﹕ 𝐂𝐫𝐞𝐚𝐭𝐞𝐬 𝐚𝐧 𝐚𝐮𝐝𝐢𝐨 𝐞𝐥𝐞𝐦𝐞𝐧𝐭 𝐟𝐨𝐫 𝐛𝐚𝐜𝐤𝐠𝐫𝐨𝐮𝐧𝐝 𝐦𝐮𝐬𝐢𝐜. 𝐓𝐡𝐞 𝐥𝐨𝐨𝐩⁼"𝐭𝐫𝐮𝐞" 𝐞𝐧𝐬𝐮𝐫𝐞𝐬 𝐭𝐡𝐚𝐭 𝐢𝐭 𝐜𝐨𝐧𝐭𝐢𝐧𝐮𝐞𝐬 𝐫𝐮𝐧𝐧𝐢𝐧𝐠 𝐢𝐧 𝐭𝐡𝐞 𝐛𝐚𝐜𝐤𝐠𝐫𝐨𝐮𝐧𝐝 𝐭𝐡𝐫𝐨𝐮𝐠𝐡𝐨𝐮𝐭 𝐭𝐡𝐞 𝐠𝐚𝐦𝐞. 𝐈𝐭 𝐢𝐬 𝐚𝐮𝐭𝐨 ⁻𝐩𝐫𝐞𝐥𝐨𝐚𝐝 𝐭𝐨 𝐩𝐫𝐞𝐯𝐞𝐧𝐭 𝐚 𝐝𝐞𝐥𝐚𝐲 𝐰𝐡𝐞𝐧 𝐬𝐭𝐚𝐫𝐭𝐢𝐧𝐠 𝐭𝐡𝐞 𝐠𝐚𝐦𝐞.
+<𝐬𝐜𝐫𝐢𝐩𝐭 𝐬𝐫𝐜⁼"𝐥𝐨𝐠𝐢𝐜.𝐣𝐬"></𝐬𝐜𝐫𝐢𝐩𝐭>﹕ 𝐈𝐦𝐩𝐨𝐫𝐭𝐬 𝐚𝐧 𝐞𝐱𝐭𝐞𝐫𝐧𝐚𝐥 𝐉𝐚𝐯𝐚𝐒𝐜𝐫𝐢𝐩𝐭 𝐟𝐢𝐥𝐞 ⁽𝐥𝐨𝐠𝐢𝐜.𝐣𝐬⁾, 𝐰𝐡𝐢𝐜𝐡 𝐡𝐚𝐬 𝐭𝐡𝐞 𝐠𝐚𝐦𝐞 𝐥𝐨𝐠𝐢𝐜 𝐭𝐨 𝐜𝐨𝐧𝐭𝐫𝐨𝐥 𝐟𝐫𝐮𝐢𝐭 𝐠𝐞𝐧𝐞𝐫𝐚𝐭𝐢𝐨𝐧, 𝐬𝐥𝐢𝐜𝐢𝐧𝐠, 𝐬𝐜𝐨𝐫𝐞 𝐮𝐩𝐝𝐚𝐭𝐞, 𝐚𝐧𝐝 𝐜𝐨𝐮𝐧𝐭𝐝𝐨𝐰𝐧 𝐭𝐢𝐦𝐞𝐫.
 
-Game Flow
-Start Game:
-Upon page load, the game starts with the timer set to 30 seconds.
-Background music plays, and fruits start appearing randomly on the screen.
+𝟐. 𝐒𝐭𝐫𝐮𝐜𝐭𝐮𝐫𝐞 𝐚𝐧𝐝 𝐆𝐚𝐦𝐞 𝐅𝐥𝐨𝐰
+𝟐.𝟏 𝐒𝐜𝐨𝐫𝐞 𝐃𝐢𝐬𝐩𝐥𝐚𝐲
+𝐓𝐡𝐞 𝐬𝐜𝐨𝐫𝐞 𝐢𝐬 𝐢𝐧𝐢𝐭𝐢𝐚𝐥𝐢𝐳𝐞𝐝 𝐭𝐨 𝟎 𝐢𝐧 𝐭𝐡𝐞 <𝐝𝐢𝐯 𝐢𝐝⁼"𝐬𝐜𝐨𝐫𝐞"> 𝐭𝐚𝐠𝐬.
+𝐀𝐬 𝐭𝐡𝐞 𝐩𝐥𝐚𝐲𝐞𝐫 𝐜𝐮𝐭𝐬 𝐟𝐫𝐮𝐢𝐭𝐬, 𝐭𝐡𝐞 𝐬𝐜𝐨𝐫𝐞 𝐢𝐬 𝐮𝐩𝐝𝐚𝐭𝐞𝐝 𝐝𝐲𝐧𝐚𝐦𝐢𝐜𝐚𝐥𝐥𝐲 𝐯𝐢𝐚 𝐉𝐚𝐯𝐚𝐒𝐜𝐫𝐢𝐩𝐭.
+𝟐.𝟐 𝐓𝐢𝐦𝐞𝐫 𝐃𝐢𝐬𝐩𝐥𝐚𝐲
+𝐓𝐡𝐞 𝐭𝐢𝐦𝐞𝐫 𝐬𝐭𝐚𝐫𝐭𝐬 𝐚𝐭 𝟑𝟎 𝐬𝐞𝐜𝐨𝐧𝐝𝐬 𝐢𝐧 𝐭𝐡𝐞 𝐠𝐚𝐦𝐞. 𝐓𝐡𝐞 𝐭𝐢𝐦𝐞𝐫 𝐜𝐨𝐮𝐧𝐭𝐞𝐫 𝐢𝐬 𝐝𝐢𝐬𝐩𝐥𝐚𝐲𝐞𝐝 𝐢𝐧 𝐭𝐡𝐞 <𝐝𝐢𝐯 𝐢𝐝⁼"𝐭𝐢𝐦𝐞𝐫"> 𝐭𝐚𝐠𝐬 𝐚𝐧𝐝 𝐮𝐩𝐝𝐚𝐭𝐞𝐬 𝐞𝐯𝐞𝐫𝐲 𝐬𝐞𝐜𝐨𝐧𝐝
+𝐀𝐟𝐭𝐞𝐫 𝐭𝐡𝐞 𝐭𝐢𝐦𝐞𝐫 𝐜𝐨𝐮𝐧𝐭𝐬 𝐭𝐨 𝐳𝐞𝐫𝐨, 𝐭𝐡𝐞 𝐠𝐚𝐦𝐞 𝐰𝐢𝐥𝐥 𝐝𝐢𝐬𝐩𝐥𝐚𝐲 𝐚 "𝐆𝐚𝐦𝐞 𝐎𝐯𝐞𝐫" 𝐬𝐜𝐫𝐞𝐞𝐧﹔ 𝐭𝐡𝐞 𝐟𝐢𝐧𝐚𝐥 𝐬𝐜𝐨𝐫𝐞 𝐰𝐢𝐥𝐥 𝐛𝐞 𝐝𝐢𝐬𝐩𝐥𝐚𝐲𝐞𝐝 𝐨𝐧 𝐭𝐡𝐞 𝐬𝐜𝐫𝐞𝐞𝐧.
+𝟐.𝟑 𝐅𝐫𝐮𝐢𝐭 𝐆𝐞𝐧𝐞𝐫𝐚𝐭𝐢𝐨𝐧
+𝐓𝐡𝐞 𝐟𝐫𝐮𝐢𝐭𝐬 𝐰𝐢𝐥𝐥 𝐫𝐚𝐧𝐝𝐨𝐦𝐥𝐲 𝐛𝐞 𝐠𝐞𝐧𝐞𝐫𝐚𝐭𝐞𝐝 𝐰𝐢𝐭𝐡𝐢𝐧 𝐭𝐡𝐞 𝐭𝐡𝐞 <𝐝𝐢𝐯 𝐢𝐝⁼"𝐟𝐫𝐮𝐢𝐭𝐬"> 𝐜𝐨𝐧𝐭𝐚𝐢𝐧𝐞𝐫 𝐰𝐢𝐭𝐡 𝐉𝐚𝐯𝐚𝐒𝐜𝐫𝐢𝐩𝐭. 𝐄𝐚𝐜𝐡 𝐟𝐫𝐮𝐢𝐭 𝐢𝐬 𝐚 𝐜𝐥𝐢𝐜𝐤𝐚𝐛𝐥𝐞 𝐞𝐥𝐞𝐦𝐞𝐧𝐭 𝐰𝐢𝐭𝐡 𝐰𝐡𝐢𝐜𝐡 𝐭𝐡𝐞 𝐩𝐥𝐚𝐲𝐞𝐫 𝐜𝐚𝐧 𝐢𝐧𝐭𝐞𝐫𝐚𝐜𝐭.
+𝟐.𝟒 𝐄𝐧𝐝 𝐆𝐚𝐦𝐞 𝐒𝐞𝐜𝐭𝐢𝐨𝐧
+𝐖𝐡𝐞𝐧 𝐭𝐡𝐞 𝐜𝐨𝐮𝐧𝐭𝐝𝐨𝐰𝐧 𝐭𝐢𝐦𝐞𝐫 𝐡𝐚𝐬 𝐜𝐨𝐮𝐧𝐭𝐞𝐝 𝐝𝐨𝐰𝐧 𝐭𝐨 𝐳𝐞𝐫𝐨, 𝐢𝐭 𝐰𝐢𝐥𝐥 𝐩𝐚𝐮𝐬𝐞 𝐭𝐡𝐞 𝐠𝐚𝐦𝐞 𝐚𝐧𝐝 𝐫𝐞𝐯𝐞𝐚𝐥 𝐭𝐡𝐞 𝐞𝐧𝐝𝐆𝐚𝐦𝐞 𝐬𝐞𝐜𝐭𝐢𝐨𝐧. 𝐓𝐡𝐢𝐬 𝐬𝐞𝐜𝐭𝐢𝐨𝐧 𝐰𝐢𝐥𝐥 𝐜𝐨𝐧𝐭𝐚𝐢𝐧 𝐭𝐡𝐞 𝐦𝐞𝐬𝐬𝐚𝐠𝐞 "𝐆𝐚𝐦𝐞 𝐎𝐯𝐞𝐫﹗" 𝐚𝐬 𝐰𝐞𝐥𝐥 𝐚𝐬 𝐭𝐡𝐞 𝐮𝐬𝐞𝐫'𝐬 𝐟𝐢𝐧𝐚𝐥 𝐬𝐜𝐨𝐫𝐞.
+𝐓𝐡𝐞 𝐩𝐥𝐚𝐲𝐞𝐫 𝐜𝐚𝐧 𝐫𝐞𝐬𝐮𝐦𝐞 𝐭𝐡𝐞 𝐠𝐚𝐦𝐞 𝐛𝐲 𝐮𝐬𝐢𝐧𝐠 𝐭𝐡𝐞 "𝐑𝐞𝐬𝐭𝐚𝐫𝐭" 𝐛𝐮𝐭𝐭𝐨𝐧, 𝐰𝐡𝐢𝐜𝐡 𝐚𝐜𝐭𝐢𝐯𝐚𝐭𝐞𝐬 𝐭𝐡𝐞 𝐫𝐞𝐬𝐭𝐚𝐫𝐭𝐆𝐚𝐦𝐞⁽⁾ 𝐟𝐮𝐧𝐜𝐭𝐢𝐨𝐧 𝐢𝐧 𝐭𝐡𝐞 𝐉𝐚𝐯𝐚𝐒𝐜𝐫𝐢𝐩𝐭 𝐟𝐢𝐥𝐞.
 
-Fruit Slicing:
-When the player clicks on a fruit, it is "sliced" (removed from the screen), and the score is increased by 1.
-A slicing sound effect is played upon each click.
+𝐆𝐚𝐦𝐞 𝐅𝐥𝐨𝐰
+𝐒𝐭𝐚𝐫𝐭 𝐆𝐚𝐦𝐞﹕
+𝐔𝐩𝐨𝐧 𝐩𝐚𝐠𝐞 𝐥𝐨𝐚𝐝, 𝐭𝐡𝐞 𝐠𝐚𝐦𝐞 𝐬𝐭𝐚𝐫𝐭𝐬 𝐰𝐢𝐭𝐡 𝐭𝐡𝐞 𝐭𝐢𝐦𝐞𝐫 𝐬𝐞𝐭 𝐭𝐨 𝟑𝟎 𝐬𝐞𝐜𝐨𝐧𝐝𝐬.
+𝐁𝐚𝐜𝐤𝐠𝐫𝐨𝐮𝐧𝐝 𝐦𝐮𝐬𝐢𝐜 𝐩𝐥𝐚𝐲𝐬, 𝐚𝐧𝐝 𝐟𝐫𝐮𝐢𝐭𝐬 𝐬𝐭𝐚𝐫𝐭 𝐚𝐩𝐩𝐞𝐚𝐫𝐢𝐧𝐠 𝐫𝐚𝐧𝐝𝐨𝐦𝐥𝐲 𝐨𝐧 𝐭𝐡𝐞 𝐬𝐜𝐫𝐞𝐞𝐧.
 
-Timer Countdown:
-The countdown timer decreases by one second every second.
-If the timer reaches 0, the game ends.
+𝐅𝐫𝐮𝐢𝐭 𝐒𝐥𝐢𝐜𝐢𝐧𝐠﹕
+𝐖𝐡𝐞𝐧 𝐭𝐡𝐞 𝐩𝐥𝐚𝐲𝐞𝐫 𝐜𝐥𝐢𝐜𝐤𝐬 𝐨𝐧 𝐚 𝐟𝐫𝐮𝐢𝐭, 𝐢𝐭 𝐢𝐬 "𝐬𝐥𝐢𝐜𝐞𝐝" ⁽𝐫𝐞𝐦𝐨𝐯𝐞𝐝 𝐟𝐫𝐨𝐦 𝐭𝐡𝐞 𝐬𝐜𝐫𝐞𝐞𝐧⁾, 𝐚𝐧𝐝 𝐭𝐡𝐞 𝐬𝐜𝐨𝐫𝐞 𝐢𝐬 𝐢𝐧𝐜𝐫𝐞𝐚𝐬𝐞𝐝 𝐛𝐲 𝟏.
+𝐀 𝐬𝐥𝐢𝐜𝐢𝐧𝐠 𝐬𝐨𝐮𝐧𝐝 𝐞𝐟𝐟𝐞𝐜𝐭 𝐢𝐬 𝐩𝐥𝐚𝐲𝐞𝐝 𝐮𝐩𝐨𝐧 𝐞𝐚𝐜𝐡 𝐜𝐥𝐢𝐜𝐤.
 
-End Game:
-In the game, when the timer becomes 0, the game is over with a final score message.
-There is the "Restart" button, where with one click, score, timer, and fruits will be reset by themselves.
-6. Technical Requirements
-5.1 Browser Compatibility
-It should be perfectly compatible with all of the latest web browsers such as Chrome, Firefox, Safari, and Edge. The <audio> tag support for sound should be available in any of the latest web browsers.
-5.2 Mobile Responsiveness
-The game uses the meta tag with viewport to ensure it scales properly on mobile devices.
-It may require additional CSS tweaks for better responsiveness on smaller screens (e.g., centering game elements and adjusting fruit sizes).
-5.3 Game Accessibility
-To improve accessibility, consider adding keyboard interactions (e.g., using the spacebar or arrow keys) and visual cues for players with disabilities.
-7. Possible Enhancements
-Fruit Variety: Present various fruits with different point values and graphics on them
-Difficulty Levels: Increase the appearance speed of fruits or decrease the interval at higher difficulty levels.
-Animations: Improve the slicing effect using CSS animations or an extra JavaScript for visual feedback
-Leaderboard: Store high scores in the local or server.  Display a leaderboard for challenging matches
+𝐓𝐢𝐦𝐞𝐫 𝐂𝐨𝐮𝐧𝐭𝐝𝐨𝐰𝐧﹕
+𝐓𝐡𝐞 𝐜𝐨𝐮𝐧𝐭𝐝𝐨𝐰𝐧 𝐭𝐢𝐦𝐞𝐫 𝐝𝐞𝐜𝐫𝐞𝐚𝐬𝐞𝐬 𝐛𝐲 𝐨𝐧𝐞 𝐬𝐞𝐜𝐨𝐧𝐝 𝐞𝐯𝐞𝐫𝐲 𝐬𝐞𝐜𝐨𝐧𝐝.
+𝐈𝐟 𝐭𝐡𝐞 𝐭𝐢𝐦𝐞𝐫 𝐫𝐞𝐚𝐜𝐡𝐞𝐬 𝟎, 𝐭𝐡𝐞 𝐠𝐚𝐦𝐞 𝐞𝐧𝐝𝐬.
 
-Technical Documentation: CSS for Fruit Fade Out Game
-The CSS code implements the visual styling for the Fruit Slicing Game, including layout, animation, and interactive elements. The style ensures the game is clean and modern with an engaging user interface. Below is a concise break down on each section of the code.
+𝐄𝐧𝐝 𝐆𝐚𝐦𝐞﹕
+𝐈𝐧 𝐭𝐡𝐞 𝐠𝐚𝐦𝐞, 𝐰𝐡𝐞𝐧 𝐭𝐡𝐞 𝐭𝐢𝐦𝐞𝐫 𝐛𝐞𝐜𝐨𝐦𝐞𝐬 𝟎, 𝐭𝐡𝐞 𝐠𝐚𝐦𝐞 𝐢𝐬 𝐨𝐯𝐞𝐫 𝐰𝐢𝐭𝐡 𝐚 𝐟𝐢𝐧𝐚𝐥 𝐬𝐜𝐨𝐫𝐞 𝐦𝐞𝐬𝐬𝐚𝐠𝐞.
+𝐓𝐡𝐞𝐫𝐞 𝐢𝐬 𝐭𝐡𝐞 "𝐑𝐞𝐬𝐭𝐚𝐫𝐭" 𝐛𝐮𝐭𝐭𝐨𝐧, 𝐰𝐡𝐞𝐫𝐞 𝐰𝐢𝐭𝐡 𝐨𝐧𝐞 𝐜𝐥𝐢𝐜𝐤, 𝐬𝐜𝐨𝐫𝐞, 𝐭𝐢𝐦𝐞𝐫, 𝐚𝐧𝐝 𝐟𝐫𝐮𝐢𝐭𝐬 𝐰𝐢𝐥𝐥 𝐛𝐞 𝐫𝐞𝐬𝐞𝐭 𝐛𝐲 𝐭𝐡𝐞𝐦𝐬𝐞𝐥𝐯𝐞𝐬.
+𝟔. 𝐓𝐞𝐜𝐡𝐧𝐢𝐜𝐚𝐥 𝐑𝐞𝐪𝐮𝐢𝐫𝐞𝐦𝐞𝐧𝐭𝐬
+𝟓.𝟏 𝐁𝐫𝐨𝐰𝐬𝐞𝐫 𝐂𝐨𝐦𝐩𝐚𝐭𝐢𝐛𝐢𝐥𝐢𝐭𝐲
+𝐈𝐭 𝐬𝐡𝐨𝐮𝐥𝐝 𝐛𝐞 𝐩𝐞𝐫𝐟𝐞𝐜𝐭𝐥𝐲 𝐜𝐨𝐦𝐩𝐚𝐭𝐢𝐛𝐥𝐞 𝐰𝐢𝐭𝐡 𝐚𝐥𝐥 𝐨𝐟 𝐭𝐡𝐞 𝐥𝐚𝐭𝐞𝐬𝐭 𝐰𝐞𝐛 𝐛𝐫𝐨𝐰𝐬𝐞𝐫𝐬 𝐬𝐮𝐜𝐡 𝐚𝐬 𝐂𝐡𝐫𝐨𝐦𝐞, 𝐅𝐢𝐫𝐞𝐟𝐨𝐱, 𝐒𝐚𝐟𝐚𝐫𝐢, 𝐚𝐧𝐝 𝐄𝐝𝐠𝐞. 𝐓𝐡𝐞 <𝐚𝐮𝐝𝐢𝐨> 𝐭𝐚𝐠 𝐬𝐮𝐩𝐩𝐨𝐫𝐭 𝐟𝐨𝐫 𝐬𝐨𝐮𝐧𝐝 𝐬𝐡𝐨𝐮𝐥𝐝 𝐛𝐞 𝐚𝐯𝐚𝐢𝐥𝐚𝐛𝐥𝐞 𝐢𝐧 𝐚𝐧𝐲 𝐨𝐟 𝐭𝐡𝐞 𝐥𝐚𝐭𝐞𝐬𝐭 𝐰𝐞𝐛 𝐛𝐫𝐨𝐰𝐬𝐞𝐫𝐬.
+𝟓.𝟐 𝐌𝐨𝐛𝐢𝐥𝐞 𝐑𝐞𝐬𝐩𝐨𝐧𝐬𝐢𝐯𝐞𝐧𝐞𝐬𝐬
+𝐓𝐡𝐞 𝐠𝐚𝐦𝐞 𝐮𝐬𝐞𝐬 𝐭𝐡𝐞 𝐦𝐞𝐭𝐚 𝐭𝐚𝐠 𝐰𝐢𝐭𝐡 𝐯𝐢𝐞𝐰𝐩𝐨𝐫𝐭 𝐭𝐨 𝐞𝐧𝐬𝐮𝐫𝐞 𝐢𝐭 𝐬𝐜𝐚𝐥𝐞𝐬 𝐩𝐫𝐨𝐩𝐞𝐫𝐥𝐲 𝐨𝐧 𝐦𝐨𝐛𝐢𝐥𝐞 𝐝𝐞𝐯𝐢𝐜𝐞𝐬.
+𝐈𝐭 𝐦𝐚𝐲 𝐫𝐞𝐪𝐮𝐢𝐫𝐞 𝐚𝐝𝐝𝐢𝐭𝐢𝐨𝐧𝐚𝐥 𝐂𝐒𝐒 𝐭𝐰𝐞𝐚𝐤𝐬 𝐟𝐨𝐫 𝐛𝐞𝐭𝐭𝐞𝐫 𝐫𝐞𝐬𝐩𝐨𝐧𝐬𝐢𝐯𝐞𝐧𝐞𝐬𝐬 𝐨𝐧 𝐬𝐦𝐚𝐥𝐥𝐞𝐫 𝐬𝐜𝐫𝐞𝐞𝐧𝐬 ⁽𝐞.𝐠., 𝐜𝐞𝐧𝐭𝐞𝐫𝐢𝐧𝐠 𝐠𝐚𝐦𝐞 𝐞𝐥𝐞𝐦𝐞𝐧𝐭𝐬 𝐚𝐧𝐝 𝐚𝐝𝐣𝐮𝐬𝐭𝐢𝐧𝐠 𝐟𝐫𝐮𝐢𝐭 𝐬𝐢𝐳𝐞𝐬⁾.
+𝟓.𝟑 𝐆𝐚𝐦𝐞 𝐀𝐜𝐜𝐞𝐬𝐬𝐢𝐛𝐢𝐥𝐢𝐭𝐲
+𝐓𝐨 𝐢𝐦𝐩𝐫𝐨𝐯𝐞 𝐚𝐜𝐜𝐞𝐬𝐬𝐢𝐛𝐢𝐥𝐢𝐭𝐲, 𝐜𝐨𝐧𝐬𝐢𝐝𝐞𝐫 𝐚𝐝𝐝𝐢𝐧𝐠 𝐤𝐞𝐲𝐛𝐨𝐚𝐫𝐝 𝐢𝐧𝐭𝐞𝐫𝐚𝐜𝐭𝐢𝐨𝐧𝐬 ⁽𝐞.𝐠., 𝐮𝐬𝐢𝐧𝐠 𝐭𝐡𝐞 𝐬𝐩𝐚𝐜𝐞𝐛𝐚𝐫 𝐨𝐫 𝐚𝐫𝐫𝐨𝐰 𝐤𝐞𝐲𝐬⁾ 𝐚𝐧𝐝 𝐯𝐢𝐬𝐮𝐚𝐥 𝐜𝐮𝐞𝐬 𝐟𝐨𝐫 𝐩𝐥𝐚𝐲𝐞𝐫𝐬 𝐰𝐢𝐭𝐡 𝐝𝐢𝐬𝐚𝐛𝐢𝐥𝐢𝐭𝐢𝐞𝐬.
+𝟕. 𝐏𝐨𝐬𝐬𝐢𝐛𝐥𝐞 𝐄𝐧𝐡𝐚𝐧𝐜𝐞𝐦𝐞𝐧𝐭𝐬
+𝐅𝐫𝐮𝐢𝐭 𝐕𝐚𝐫𝐢𝐞𝐭𝐲﹕ 𝐏𝐫𝐞𝐬𝐞𝐧𝐭 𝐯𝐚𝐫𝐢𝐨𝐮𝐬 𝐟𝐫𝐮𝐢𝐭𝐬 𝐰𝐢𝐭𝐡 𝐝𝐢𝐟𝐟𝐞𝐫𝐞𝐧𝐭 𝐩𝐨𝐢𝐧𝐭 𝐯𝐚𝐥𝐮𝐞𝐬 𝐚𝐧𝐝 𝐠𝐫𝐚𝐩𝐡𝐢𝐜𝐬 𝐨𝐧 𝐭𝐡𝐞𝐦
+𝐃𝐢𝐟𝐟𝐢𝐜𝐮𝐥𝐭𝐲 𝐋𝐞𝐯𝐞𝐥𝐬﹕ 𝐈𝐧𝐜𝐫𝐞𝐚𝐬𝐞 𝐭𝐡𝐞 𝐚𝐩𝐩𝐞𝐚𝐫𝐚𝐧𝐜𝐞 𝐬𝐩𝐞𝐞𝐝 𝐨𝐟 𝐟𝐫𝐮𝐢𝐭𝐬 𝐨𝐫 𝐝𝐞𝐜𝐫𝐞𝐚𝐬𝐞 𝐭𝐡𝐞 𝐢𝐧𝐭𝐞𝐫𝐯𝐚𝐥 𝐚𝐭 𝐡𝐢𝐠𝐡𝐞𝐫 𝐝𝐢𝐟𝐟𝐢𝐜𝐮𝐥𝐭𝐲 𝐥𝐞𝐯𝐞𝐥𝐬.
+𝐀𝐧𝐢𝐦𝐚𝐭𝐢𝐨𝐧𝐬﹕ 𝐈𝐦𝐩𝐫𝐨𝐯𝐞 𝐭𝐡𝐞 𝐬𝐥𝐢𝐜𝐢𝐧𝐠 𝐞𝐟𝐟𝐞𝐜𝐭 𝐮𝐬𝐢𝐧𝐠 𝐂𝐒𝐒 𝐚𝐧𝐢𝐦𝐚𝐭𝐢𝐨𝐧𝐬 𝐨𝐫 𝐚𝐧 𝐞𝐱𝐭𝐫𝐚 𝐉𝐚𝐯𝐚𝐒𝐜𝐫𝐢𝐩𝐭 𝐟𝐨𝐫 𝐯𝐢𝐬𝐮𝐚𝐥 𝐟𝐞𝐞𝐝𝐛𝐚𝐜𝐤
+𝐋𝐞𝐚𝐝𝐞𝐫𝐛𝐨𝐚𝐫𝐝﹕ 𝐒𝐭𝐨𝐫𝐞 𝐡𝐢𝐠𝐡 𝐬𝐜𝐨𝐫𝐞𝐬 𝐢𝐧 𝐭𝐡𝐞 𝐥𝐨𝐜𝐚𝐥 𝐨𝐫 𝐬𝐞𝐫𝐯𝐞𝐫.  𝐃𝐢𝐬𝐩𝐥𝐚𝐲 𝐚 𝐥𝐞𝐚𝐝𝐞𝐫𝐛𝐨𝐚𝐫𝐝 𝐟𝐨𝐫 𝐜𝐡𝐚𝐥𝐥𝐞𝐧𝐠𝐢𝐧𝐠 𝐦𝐚𝐭𝐜𝐡𝐞𝐬
 
-1. General Layout and Body Styling ->
-display: flex;: This uses CSS Flexbox to center the content both vertically and horizontally in the viewport.
-justify-content: center;: Horizontally centers the #gameArea within the body.
-align-items: center;: Vertically centers the #gameArea within the body.
-height: 100vh;: Sets the body to take up the full height of the viewport.
-background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);: Applies a soft gradient background to the body, starting from pink (#ff9a9e) to a light peach color (#fad0c4).
-font-family: Arial, sans-serif;: Sets a sans-serif font for the page content.
-margin: 0;: Combats any default margin added by the browser so that the body fills the viewport.
+𝐓𝐞𝐜𝐡𝐧𝐢𝐜𝐚𝐥 𝐃𝐨𝐜𝐮𝐦𝐞𝐧𝐭𝐚𝐭𝐢𝐨𝐧﹕ 𝐂𝐒𝐒 𝐟𝐨𝐫 𝐅𝐫𝐮𝐢𝐭 𝐅𝐚𝐝𝐞 𝐎𝐮𝐭 𝐆𝐚𝐦𝐞
+𝐓𝐡𝐞 𝐂𝐒𝐒 𝐜𝐨𝐝𝐞 𝐢𝐦𝐩𝐥𝐞𝐦𝐞𝐧𝐭𝐬 𝐭𝐡𝐞 𝐯𝐢𝐬𝐮𝐚𝐥 𝐬𝐭𝐲𝐥𝐢𝐧𝐠 𝐟𝐨𝐫 𝐭𝐡𝐞 𝐅𝐫𝐮𝐢𝐭 𝐒𝐥𝐢𝐜𝐢𝐧𝐠 𝐆𝐚𝐦𝐞, 𝐢𝐧𝐜𝐥𝐮𝐝𝐢𝐧𝐠 𝐥𝐚𝐲𝐨𝐮𝐭, 𝐚𝐧𝐢𝐦𝐚𝐭𝐢𝐨𝐧, 𝐚𝐧𝐝 𝐢𝐧𝐭𝐞𝐫𝐚𝐜𝐭𝐢𝐯𝐞 𝐞𝐥𝐞𝐦𝐞𝐧𝐭𝐬. 𝐓𝐡𝐞 𝐬𝐭𝐲𝐥𝐞 𝐞𝐧𝐬𝐮𝐫𝐞𝐬 𝐭𝐡𝐞 𝐠𝐚𝐦𝐞 𝐢𝐬 𝐜𝐥𝐞𝐚𝐧 𝐚𝐧𝐝 𝐦𝐨𝐝𝐞𝐫𝐧 𝐰𝐢𝐭𝐡 𝐚𝐧 𝐞𝐧𝐠𝐚𝐠𝐢𝐧𝐠 𝐮𝐬𝐞𝐫 𝐢𝐧𝐭𝐞𝐫𝐟𝐚𝐜𝐞. 𝐁𝐞𝐥𝐨𝐰 𝐢𝐬 𝐚 𝐜𝐨𝐧𝐜𝐢𝐬𝐞 𝐛𝐫𝐞𝐚𝐤 𝐝𝐨𝐰𝐧 𝐨𝐧 𝐞𝐚𝐜𝐡 𝐬𝐞𝐜𝐭𝐢𝐨𝐧 𝐨𝐟 𝐭𝐡𝐞 𝐜𝐨𝐝𝐞.
 
-2. Game Area Styling ->
-position: relative; makes the positioning context of child elements (fruits and text), thus positioning them absolutely within this container.
-width: 600px; height: 400px; sets a fixed width and height to the game area.
-border: 2px solid #ccc; adds a light gray border around the game area.
-overflow: hidden;: Ensures that any elements (like fruits) that exceed the boundaries of the game area are clipped and not visible.
-background-color: rgba(255, 255, 255, 0.8);: Applies a semi-transparent white background to the game area, which gives it a soft, frosted glass effect.
-border-radius: 15px;: Rounds the corners of the game area for a smooth, modern look.
-box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);: Adds a shadow effect on the game area to give it a floating feel. This makes the game pop up from the background.
+𝟏. 𝐆𝐞𝐧𝐞𝐫𝐚𝐥 𝐋𝐚𝐲𝐨𝐮𝐭 𝐚𝐧𝐝 𝐁𝐨𝐝𝐲 𝐒𝐭𝐲𝐥𝐢𝐧𝐠 
+𝐝𝐢𝐬𝐩𝐥𝐚𝐲﹕ 𝐟𝐥𝐞𝐱﹔﹕ 𝐓𝐡𝐢𝐬 𝐮𝐬𝐞𝐬 𝐂𝐒𝐒 𝐅𝐥𝐞𝐱𝐛𝐨𝐱 𝐭𝐨 𝐜𝐞𝐧𝐭𝐞𝐫 𝐭𝐡𝐞 𝐜𝐨𝐧𝐭𝐞𝐧𝐭 𝐛𝐨𝐭𝐡 𝐯𝐞𝐫𝐭𝐢𝐜𝐚𝐥𝐥𝐲 𝐚𝐧𝐝 𝐡𝐨𝐫𝐢𝐳𝐨𝐧𝐭𝐚𝐥𝐥𝐲 𝐢𝐧 𝐭𝐡𝐞 𝐯𝐢𝐞𝐰𝐩𝐨𝐫𝐭.
+𝐣𝐮𝐬𝐭𝐢𝐟𝐲⁻𝐜𝐨𝐧𝐭𝐞𝐧𝐭﹕ 𝐜𝐞𝐧𝐭𝐞𝐫﹔﹕ 𝐇𝐨𝐫𝐢𝐳𝐨𝐧𝐭𝐚𝐥𝐥𝐲 𝐜𝐞𝐧𝐭𝐞𝐫𝐬 𝐭𝐡𝐞 #𝐠𝐚𝐦𝐞𝐀𝐫𝐞𝐚 𝐰𝐢𝐭𝐡𝐢𝐧 𝐭𝐡𝐞 𝐛𝐨𝐝𝐲.
+𝐚𝐥𝐢𝐠𝐧⁻𝐢𝐭𝐞𝐦𝐬﹕ 𝐜𝐞𝐧𝐭𝐞𝐫﹔﹕ 𝐕𝐞𝐫𝐭𝐢𝐜𝐚𝐥𝐥𝐲 𝐜𝐞𝐧𝐭𝐞𝐫𝐬 𝐭𝐡𝐞 #𝐠𝐚𝐦𝐞𝐀𝐫𝐞𝐚 𝐰𝐢𝐭𝐡𝐢𝐧 𝐭𝐡𝐞 𝐛𝐨𝐝𝐲.
+𝐡𝐞𝐢𝐠𝐡𝐭﹕ 𝟏𝟎𝟎𝐯𝐡﹔﹕ 𝐒𝐞𝐭𝐬 𝐭𝐡𝐞 𝐛𝐨𝐝𝐲 𝐭𝐨 𝐭𝐚𝐤𝐞 𝐮𝐩 𝐭𝐡𝐞 𝐟𝐮𝐥𝐥 𝐡𝐞𝐢𝐠𝐡𝐭 𝐨𝐟 𝐭𝐡𝐞 𝐯𝐢𝐞𝐰𝐩𝐨𝐫𝐭.
+𝐛𝐚𝐜𝐤𝐠𝐫𝐨𝐮𝐧𝐝﹕ 𝐥𝐢𝐧𝐞𝐚𝐫⁻𝐠𝐫𝐚𝐝𝐢𝐞𝐧𝐭⁽𝟏𝟑𝟓𝐝𝐞𝐠, #𝐟𝐟𝟗𝐚𝟗𝐞 𝟎﹪, #𝐟𝐚𝐝𝟎𝐜𝟒 𝟏𝟎𝟎﹪⁾﹔﹕ 𝐀𝐩𝐩𝐥𝐢𝐞𝐬 𝐚 𝐬𝐨𝐟𝐭 𝐠𝐫𝐚𝐝𝐢𝐞𝐧𝐭 𝐛𝐚𝐜𝐤𝐠𝐫𝐨𝐮𝐧𝐝 𝐭𝐨 𝐭𝐡𝐞 𝐛𝐨𝐝𝐲, 𝐬𝐭𝐚𝐫𝐭𝐢𝐧𝐠 𝐟𝐫𝐨𝐦 𝐩𝐢𝐧𝐤 ⁽#𝐟𝐟𝟗𝐚𝟗𝐞⁾ 𝐭𝐨 𝐚 𝐥𝐢𝐠𝐡𝐭 𝐩𝐞𝐚𝐜𝐡 𝐜𝐨𝐥𝐨𝐫 ⁽#𝐟𝐚𝐝𝟎𝐜𝟒⁾.
+𝐟𝐨𝐧𝐭⁻𝐟𝐚𝐦𝐢𝐥𝐲﹕ 𝐀𝐫𝐢𝐚𝐥, 𝐬𝐚𝐧𝐬⁻𝐬𝐞𝐫𝐢𝐟﹔﹕ 𝐒𝐞𝐭𝐬 𝐚 𝐬𝐚𝐧𝐬⁻𝐬𝐞𝐫𝐢𝐟 𝐟𝐨𝐧𝐭 𝐟𝐨𝐫 𝐭𝐡𝐞 𝐩𝐚𝐠𝐞 𝐜𝐨𝐧𝐭𝐞𝐧𝐭.
+𝐦𝐚𝐫𝐠𝐢𝐧﹕ 𝟎﹔﹕ 𝐂𝐨𝐦𝐛𝐚𝐭𝐬 𝐚𝐧𝐲 𝐝𝐞𝐟𝐚𝐮𝐥𝐭 𝐦𝐚𝐫𝐠𝐢𝐧 𝐚𝐝𝐝𝐞𝐝 𝐛𝐲 𝐭𝐡𝐞 𝐛𝐫𝐨𝐰𝐬𝐞𝐫 𝐬𝐨 𝐭𝐡𝐚𝐭 𝐭𝐡𝐞 𝐛𝐨𝐝𝐲 𝐟𝐢𝐥𝐥𝐬 𝐭𝐡𝐞 𝐯𝐢𝐞𝐰𝐩𝐨𝐫𝐭.
 
-3. Score and Timer Styling ->
-position: absolute;,: Places the score and timer both absolutely inside of the #gameArea .
-top: 10px;, : Ensures the score and timer are placed 10px from the top edge of the #gameArea.
-font-size: 24px;: This sets the font size for both the score and timer to make them quite prominent.
-z-index: 10;: This makes sure that the score and timer will appear above fruits and other elements because their z-index value is higher than those of fruits and other elements.
-#score { left: 10px; }: This positions the score element 10px from the left edge of the #gameArea.
-#timer { right: 10px; }: This positions the timer element 10px from the right edge of the #gameArea.
+𝟐. 𝐆𝐚𝐦𝐞 𝐀𝐫𝐞𝐚 𝐒𝐭𝐲𝐥𝐢𝐧𝐠 
+𝐩𝐨𝐬𝐢𝐭𝐢𝐨𝐧﹕ 𝐫𝐞𝐥𝐚𝐭𝐢𝐯𝐞﹔ 𝐦𝐚𝐤𝐞𝐬 𝐭𝐡𝐞 𝐩𝐨𝐬𝐢𝐭𝐢𝐨𝐧𝐢𝐧𝐠 𝐜𝐨𝐧𝐭𝐞𝐱𝐭 𝐨𝐟 𝐜𝐡𝐢𝐥𝐝 𝐞𝐥𝐞𝐦𝐞𝐧𝐭𝐬 ⁽𝐟𝐫𝐮𝐢𝐭𝐬 𝐚𝐧𝐝 𝐭𝐞𝐱𝐭⁾, 𝐭𝐡𝐮𝐬 𝐩𝐨𝐬𝐢𝐭𝐢𝐨𝐧𝐢𝐧𝐠 𝐭𝐡𝐞𝐦 𝐚𝐛𝐬𝐨𝐥𝐮𝐭𝐞𝐥𝐲 𝐰𝐢𝐭𝐡𝐢𝐧 𝐭𝐡𝐢𝐬 𝐜𝐨𝐧𝐭𝐚𝐢𝐧𝐞𝐫.
+𝐰𝐢𝐝𝐭𝐡﹕ 𝟔𝟎𝟎𝐩𝐱﹔ 𝐡𝐞𝐢𝐠𝐡𝐭﹕ 𝟒𝟎𝟎𝐩𝐱﹔ 𝐬𝐞𝐭𝐬 𝐚 𝐟𝐢𝐱𝐞𝐝 𝐰𝐢𝐝𝐭𝐡 𝐚𝐧𝐝 𝐡𝐞𝐢𝐠𝐡𝐭 𝐭𝐨 𝐭𝐡𝐞 𝐠𝐚𝐦𝐞 𝐚𝐫𝐞𝐚.
+𝐛𝐨𝐫𝐝𝐞𝐫﹕ 𝟐𝐩𝐱 𝐬𝐨𝐥𝐢𝐝 #𝐜𝐜𝐜﹔ 𝐚𝐝𝐝𝐬 𝐚 𝐥𝐢𝐠𝐡𝐭 𝐠𝐫𝐚𝐲 𝐛𝐨𝐫𝐝𝐞𝐫 𝐚𝐫𝐨𝐮𝐧𝐝 𝐭𝐡𝐞 𝐠𝐚𝐦𝐞 𝐚𝐫𝐞𝐚.
+𝐨𝐯𝐞𝐫𝐟𝐥𝐨𝐰﹕ 𝐡𝐢𝐝𝐝𝐞𝐧﹔﹕ 𝐄𝐧𝐬𝐮𝐫𝐞𝐬 𝐭𝐡𝐚𝐭 𝐚𝐧𝐲 𝐞𝐥𝐞𝐦𝐞𝐧𝐭𝐬 ⁽𝐥𝐢𝐤𝐞 𝐟𝐫𝐮𝐢𝐭𝐬⁾ 𝐭𝐡𝐚𝐭 𝐞𝐱𝐜𝐞𝐞𝐝 𝐭𝐡𝐞 𝐛𝐨𝐮𝐧𝐝𝐚𝐫𝐢𝐞𝐬 𝐨𝐟 𝐭𝐡𝐞 𝐠𝐚𝐦𝐞 𝐚𝐫𝐞𝐚 𝐚𝐫𝐞 𝐜𝐥𝐢𝐩𝐩𝐞𝐝 𝐚𝐧𝐝 𝐧𝐨𝐭 𝐯𝐢𝐬𝐢𝐛𝐥𝐞.
+𝐛𝐚𝐜𝐤𝐠𝐫𝐨𝐮𝐧𝐝⁻𝐜𝐨𝐥𝐨𝐫﹕ 𝐫𝐠𝐛𝐚⁽𝟐𝟓𝟓, 𝟐𝟓𝟓, 𝟐𝟓𝟓, 𝟎.𝟖⁾﹔﹕ 𝐀𝐩𝐩𝐥𝐢𝐞𝐬 𝐚 𝐬𝐞𝐦𝐢⁻𝐭𝐫𝐚𝐧𝐬𝐩𝐚𝐫𝐞𝐧𝐭 𝐰𝐡𝐢𝐭𝐞 𝐛𝐚𝐜𝐤𝐠𝐫𝐨𝐮𝐧𝐝 𝐭𝐨 𝐭𝐡𝐞 𝐠𝐚𝐦𝐞 𝐚𝐫𝐞𝐚, 𝐰𝐡𝐢𝐜𝐡 𝐠𝐢𝐯𝐞𝐬 𝐢𝐭 𝐚 𝐬𝐨𝐟𝐭, 𝐟𝐫𝐨𝐬𝐭𝐞𝐝 𝐠𝐥𝐚𝐬𝐬 𝐞𝐟𝐟𝐞𝐜𝐭.
+𝐛𝐨𝐫𝐝𝐞𝐫⁻𝐫𝐚𝐝𝐢𝐮𝐬﹕ 𝟏𝟓𝐩𝐱﹔﹕ 𝐑𝐨𝐮𝐧𝐝𝐬 𝐭𝐡𝐞 𝐜𝐨𝐫𝐧𝐞𝐫𝐬 𝐨𝐟 𝐭𝐡𝐞 𝐠𝐚𝐦𝐞 𝐚𝐫𝐞𝐚 𝐟𝐨𝐫 𝐚 𝐬𝐦𝐨𝐨𝐭𝐡, 𝐦𝐨𝐝𝐞𝐫𝐧 𝐥𝐨𝐨𝐤.
+𝐛𝐨𝐱⁻𝐬𝐡𝐚𝐝𝐨𝐰﹕ 𝟎 𝟒𝐩𝐱 𝟐𝟎𝐩𝐱 𝐫𝐠𝐛𝐚⁽𝟎, 𝟎, 𝟎, 𝟎.𝟑⁾﹔﹕ 𝐀𝐝𝐝𝐬 𝐚 𝐬𝐡𝐚𝐝𝐨𝐰 𝐞𝐟𝐟𝐞𝐜𝐭 𝐨𝐧 𝐭𝐡𝐞 𝐠𝐚𝐦𝐞 𝐚𝐫𝐞𝐚 𝐭𝐨 𝐠𝐢𝐯𝐞 𝐢𝐭 𝐚 𝐟𝐥𝐨𝐚𝐭𝐢𝐧𝐠 𝐟𝐞𝐞𝐥. 𝐓𝐡𝐢𝐬 𝐦𝐚𝐤𝐞𝐬 𝐭𝐡𝐞 𝐠𝐚𝐦𝐞 𝐩𝐨𝐩 𝐮𝐩 𝐟𝐫𝐨𝐦 𝐭𝐡𝐞 𝐛𝐚𝐜𝐤𝐠𝐫𝐨𝐮𝐧𝐝.
 
-4. Fruit Styling ->
-position: absolute;: Posiciona a element positiva sobre #gameArea.
-cursor: pointer;: muestra el cursor como adressador cuando está posicionándose sobre la fruta, dándole la indicación de que se puede hacer clic.
-font-size: 40px;: This will increase the font size to make the fruit element more prominent in the view (it can be used for a fruit emoji or text).
-transition: transform 0.3s ease;: Adds a smooth transition to any transformations; possibly scaling or rotating the fruit.
-z-index: 5;: Places the fruit piece elements behind the score and timer but in front of everything else in the background so that they are visible when the game is played.
+𝟑. 𝐒𝐜𝐨𝐫𝐞 𝐚𝐧𝐝 𝐓𝐢𝐦𝐞𝐫 𝐒𝐭𝐲𝐥𝐢𝐧𝐠 
+𝐩𝐨𝐬𝐢𝐭𝐢𝐨𝐧﹕ 𝐚𝐛𝐬𝐨𝐥𝐮𝐭𝐞﹔,﹕ 𝐏𝐥𝐚𝐜𝐞𝐬 𝐭𝐡𝐞 𝐬𝐜𝐨𝐫𝐞 𝐚𝐧𝐝 𝐭𝐢𝐦𝐞𝐫 𝐛𝐨𝐭𝐡 𝐚𝐛𝐬𝐨𝐥𝐮𝐭𝐞𝐥𝐲 𝐢𝐧𝐬𝐢𝐝𝐞 𝐨𝐟 𝐭𝐡𝐞 #𝐠𝐚𝐦𝐞𝐀𝐫𝐞𝐚 .
+𝐭𝐨𝐩﹕ 𝟏𝟎𝐩𝐱﹔, ﹕ 𝐄𝐧𝐬𝐮𝐫𝐞𝐬 𝐭𝐡𝐞 𝐬𝐜𝐨𝐫𝐞 𝐚𝐧𝐝 𝐭𝐢𝐦𝐞𝐫 𝐚𝐫𝐞 𝐩𝐥𝐚𝐜𝐞𝐝 𝟏𝟎𝐩𝐱 𝐟𝐫𝐨𝐦 𝐭𝐡𝐞 𝐭𝐨𝐩 𝐞𝐝𝐠𝐞 𝐨𝐟 𝐭𝐡𝐞 #𝐠𝐚𝐦𝐞𝐀𝐫𝐞𝐚.
+𝐟𝐨𝐧𝐭⁻𝐬𝐢𝐳𝐞﹕ 𝟐𝟒𝐩𝐱﹔﹕ 𝐓𝐡𝐢𝐬 𝐬𝐞𝐭𝐬 𝐭𝐡𝐞 𝐟𝐨𝐧𝐭 𝐬𝐢𝐳𝐞 𝐟𝐨𝐫 𝐛𝐨𝐭𝐡 𝐭𝐡𝐞 𝐬𝐜𝐨𝐫𝐞 𝐚𝐧𝐝 𝐭𝐢𝐦𝐞𝐫 𝐭𝐨 𝐦𝐚𝐤𝐞 𝐭𝐡𝐞𝐦 𝐪𝐮𝐢𝐭𝐞 𝐩𝐫𝐨𝐦𝐢𝐧𝐞𝐧𝐭.
+𝐳⁻𝐢𝐧𝐝𝐞𝐱﹕ 𝟏𝟎﹔﹕ 𝐓𝐡𝐢𝐬 𝐦𝐚𝐤𝐞𝐬 𝐬𝐮𝐫𝐞 𝐭𝐡𝐚𝐭 𝐭𝐡𝐞 𝐬𝐜𝐨𝐫𝐞 𝐚𝐧𝐝 𝐭𝐢𝐦𝐞𝐫 𝐰𝐢𝐥𝐥 𝐚𝐩𝐩𝐞𝐚𝐫 𝐚𝐛𝐨𝐯𝐞 𝐟𝐫𝐮𝐢𝐭𝐬 𝐚𝐧𝐝 𝐨𝐭𝐡𝐞𝐫 𝐞𝐥𝐞𝐦𝐞𝐧𝐭𝐬 𝐛𝐞𝐜𝐚𝐮𝐬𝐞 𝐭𝐡𝐞𝐢𝐫 𝐳⁻𝐢𝐧𝐝𝐞𝐱 𝐯𝐚𝐥𝐮𝐞 𝐢𝐬 𝐡𝐢𝐠𝐡𝐞𝐫 𝐭𝐡𝐚𝐧 𝐭𝐡𝐨𝐬𝐞 𝐨𝐟 𝐟𝐫𝐮𝐢𝐭𝐬 𝐚𝐧𝐝 𝐨𝐭𝐡𝐞𝐫 𝐞𝐥𝐞𝐦𝐞𝐧𝐭𝐬.
+#𝐬𝐜𝐨𝐫𝐞 { 𝐥𝐞𝐟𝐭﹕ 𝟏𝟎𝐩𝐱﹔ }﹕ 𝐓𝐡𝐢𝐬 𝐩𝐨𝐬𝐢𝐭𝐢𝐨𝐧𝐬 𝐭𝐡𝐞 𝐬𝐜𝐨𝐫𝐞 𝐞𝐥𝐞𝐦𝐞𝐧𝐭 𝟏𝟎𝐩𝐱 𝐟𝐫𝐨𝐦 𝐭𝐡𝐞 𝐥𝐞𝐟𝐭 𝐞𝐝𝐠𝐞 𝐨𝐟 𝐭𝐡𝐞 #𝐠𝐚𝐦𝐞𝐀𝐫𝐞𝐚.
+#𝐭𝐢𝐦𝐞𝐫 { 𝐫𝐢𝐠𝐡𝐭﹕ 𝟏𝟎𝐩𝐱﹔ }﹕ 𝐓𝐡𝐢𝐬 𝐩𝐨𝐬𝐢𝐭𝐢𝐨𝐧𝐬 𝐭𝐡𝐞 𝐭𝐢𝐦𝐞𝐫 𝐞𝐥𝐞𝐦𝐞𝐧𝐭 𝟏𝟎𝐩𝐱 𝐟𝐫𝐨𝐦 𝐭𝐡𝐞 𝐫𝐢𝐠𝐡𝐭 𝐞𝐝𝐠𝐞 𝐨𝐟 𝐭𝐡𝐞 #𝐠𝐚𝐦𝐞𝐀𝐫𝐞𝐚.
 
-5. Fruit Piece Styling ->
-position: absolute;.: Places every piece of the sliced fruit absolutely within the #gameArea.
-transition: transform 0.5s ease, opacity 0.5s ease;: Adds in smooth transitions for both the transform (movement/scale) and opacity (fade out) of the fruit pieces, so that they appear more lively when sliced.
+𝟒. 𝐅𝐫𝐮𝐢𝐭 𝐒𝐭𝐲𝐥𝐢𝐧𝐠 
+𝐩𝐨𝐬𝐢𝐭𝐢𝐨𝐧﹕ 𝐚𝐛𝐬𝐨𝐥𝐮𝐭𝐞﹔﹕ 𝐏𝐨𝐬𝐢𝐜𝐢𝐨𝐧𝐚 𝐚 𝐞𝐥𝐞𝐦𝐞𝐧𝐭 𝐩𝐨𝐬𝐢𝐭𝐢𝐯𝐚 𝐬𝐨𝐛𝐫𝐞 #𝐠𝐚𝐦𝐞𝐀𝐫𝐞𝐚.
+𝐜𝐮𝐫𝐬𝐨𝐫﹕ 𝐩𝐨𝐢𝐧𝐭𝐞𝐫﹔﹕ 𝐦𝐮𝐞𝐬𝐭𝐫𝐚 𝐞𝐥 𝐜𝐮𝐫𝐬𝐨𝐫 𝐜𝐨𝐦𝐨 𝐚𝐝𝐫𝐞𝐬𝐬𝐚𝐝𝐨𝐫 𝐜𝐮𝐚𝐧𝐝𝐨 𝐞𝐬𝐭á 𝐩𝐨𝐬𝐢𝐜𝐢𝐨𝐧á𝐧𝐝𝐨𝐬𝐞 𝐬𝐨𝐛𝐫𝐞 𝐥𝐚 𝐟𝐫𝐮𝐭𝐚, 𝐝á𝐧𝐝𝐨𝐥𝐞 𝐥𝐚 𝐢𝐧𝐝𝐢𝐜𝐚𝐜𝐢ó𝐧 𝐝𝐞 𝐪𝐮𝐞 𝐬𝐞 𝐩𝐮𝐞𝐝𝐞 𝐡𝐚𝐜𝐞𝐫 𝐜𝐥𝐢𝐜.
+𝐟𝐨𝐧𝐭⁻𝐬𝐢𝐳𝐞﹕ 𝟒𝟎𝐩𝐱﹔﹕ 𝐓𝐡𝐢𝐬 𝐰𝐢𝐥𝐥 𝐢𝐧𝐜𝐫𝐞𝐚𝐬𝐞 𝐭𝐡𝐞 𝐟𝐨𝐧𝐭 𝐬𝐢𝐳𝐞 𝐭𝐨 𝐦𝐚𝐤𝐞 𝐭𝐡𝐞 𝐟𝐫𝐮𝐢𝐭 𝐞𝐥𝐞𝐦𝐞𝐧𝐭 𝐦𝐨𝐫𝐞 𝐩𝐫𝐨𝐦𝐢𝐧𝐞𝐧𝐭 𝐢𝐧 𝐭𝐡𝐞 𝐯𝐢𝐞𝐰 ⁽𝐢𝐭 𝐜𝐚𝐧 𝐛𝐞 𝐮𝐬𝐞𝐝 𝐟𝐨𝐫 𝐚 𝐟𝐫𝐮𝐢𝐭 𝐞𝐦𝐨𝐣𝐢 𝐨𝐫 𝐭𝐞𝐱𝐭⁾.
+𝐭𝐫𝐚𝐧𝐬𝐢𝐭𝐢𝐨𝐧﹕ 𝐭𝐫𝐚𝐧𝐬𝐟𝐨𝐫𝐦 𝟎.𝟑𝐬 𝐞𝐚𝐬𝐞﹔﹕ 𝐀𝐝𝐝𝐬 𝐚 𝐬𝐦𝐨𝐨𝐭𝐡 𝐭𝐫𝐚𝐧𝐬𝐢𝐭𝐢𝐨𝐧 𝐭𝐨 𝐚𝐧𝐲 𝐭𝐫𝐚𝐧𝐬𝐟𝐨𝐫𝐦𝐚𝐭𝐢𝐨𝐧𝐬﹔ 𝐩𝐨𝐬𝐬𝐢𝐛𝐥𝐲 𝐬𝐜𝐚𝐥𝐢𝐧𝐠 𝐨𝐫 𝐫𝐨𝐭𝐚𝐭𝐢𝐧𝐠 𝐭𝐡𝐞 𝐟𝐫𝐮𝐢𝐭.
+𝐳⁻𝐢𝐧𝐝𝐞𝐱﹕ 𝟓﹔﹕ 𝐏𝐥𝐚𝐜𝐞𝐬 𝐭𝐡𝐞 𝐟𝐫𝐮𝐢𝐭 𝐩𝐢𝐞𝐜𝐞 𝐞𝐥𝐞𝐦𝐞𝐧𝐭𝐬 𝐛𝐞𝐡𝐢𝐧𝐝 𝐭𝐡𝐞 𝐬𝐜𝐨𝐫𝐞 𝐚𝐧𝐝 𝐭𝐢𝐦𝐞𝐫 𝐛𝐮𝐭 𝐢𝐧 𝐟𝐫𝐨𝐧𝐭 𝐨𝐟 𝐞𝐯𝐞𝐫𝐲𝐭𝐡𝐢𝐧𝐠 𝐞𝐥𝐬𝐞 𝐢𝐧 𝐭𝐡𝐞 𝐛𝐚𝐜𝐤𝐠𝐫𝐨𝐮𝐧𝐝 𝐬𝐨 𝐭𝐡𝐚𝐭 𝐭𝐡𝐞𝐲 𝐚𝐫𝐞 𝐯𝐢𝐬𝐢𝐛𝐥𝐞 𝐰𝐡𝐞𝐧 𝐭𝐡𝐞 𝐠𝐚𝐦𝐞 𝐢𝐬 𝐩𝐥𝐚𝐲𝐞𝐝.
 
-6. Sliced Fruit Animation ->
-.sliced: class is added on a fruit when it is being sliced. That will call the sliceEffect animation.
-@keyframes sliceEffect: This defines the animation to be used for sliced fruit.
-0% The fruit start from the normal size which is scale(1).
-50%: The fruit scales down a little to 80% (scale(0.8)) and rotates by 15 degrees for the cutting motion.
-100%: Fruit scales down to 0 and rotates in the opposite direction (rotate(-15deg)) fades out (opacity: 0) simulates fruit disappearance after its slicing.
+𝟓. 𝐅𝐫𝐮𝐢𝐭 𝐏𝐢𝐞𝐜𝐞 𝐒𝐭𝐲𝐥𝐢𝐧𝐠 
+𝐩𝐨𝐬𝐢𝐭𝐢𝐨𝐧﹕ 𝐚𝐛𝐬𝐨𝐥𝐮𝐭𝐞﹔.﹕ 𝐏𝐥𝐚𝐜𝐞𝐬 𝐞𝐯𝐞𝐫𝐲 𝐩𝐢𝐞𝐜𝐞 𝐨𝐟 𝐭𝐡𝐞 𝐬𝐥𝐢𝐜𝐞𝐝 𝐟𝐫𝐮𝐢𝐭 𝐚𝐛𝐬𝐨𝐥𝐮𝐭𝐞𝐥𝐲 𝐰𝐢𝐭𝐡𝐢𝐧 𝐭𝐡𝐞 #𝐠𝐚𝐦𝐞𝐀𝐫𝐞𝐚.
+𝐭𝐫𝐚𝐧𝐬𝐢𝐭𝐢𝐨𝐧﹕ 𝐭𝐫𝐚𝐧𝐬𝐟𝐨𝐫𝐦 𝟎.𝟓𝐬 𝐞𝐚𝐬𝐞, 𝐨𝐩𝐚𝐜𝐢𝐭𝐲 𝟎.𝟓𝐬 𝐞𝐚𝐬𝐞﹔﹕ 𝐀𝐝𝐝𝐬 𝐢𝐧 𝐬𝐦𝐨𝐨𝐭𝐡 𝐭𝐫𝐚𝐧𝐬𝐢𝐭𝐢𝐨𝐧𝐬 𝐟𝐨𝐫 𝐛𝐨𝐭𝐡 𝐭𝐡𝐞 𝐭𝐫𝐚𝐧𝐬𝐟𝐨𝐫𝐦 ⁽𝐦𝐨𝐯𝐞𝐦𝐞𝐧𝐭/𝐬𝐜𝐚𝐥𝐞⁾ 𝐚𝐧𝐝 𝐨𝐩𝐚𝐜𝐢𝐭𝐲 ⁽𝐟𝐚𝐝𝐞 𝐨𝐮𝐭⁾ 𝐨𝐟 𝐭𝐡𝐞 𝐟𝐫𝐮𝐢𝐭 𝐩𝐢𝐞𝐜𝐞𝐬, 𝐬𝐨 𝐭𝐡𝐚𝐭 𝐭𝐡𝐞𝐲 𝐚𝐩𝐩𝐞𝐚𝐫 𝐦𝐨𝐫𝐞 𝐥𝐢𝐯𝐞𝐥𝐲 𝐰𝐡𝐞𝐧 𝐬𝐥𝐢𝐜𝐞𝐝.
+
+𝟔. 𝐒𝐥𝐢𝐜𝐞𝐝 𝐅𝐫𝐮𝐢𝐭 𝐀𝐧𝐢𝐦𝐚𝐭𝐢𝐨𝐧 
+.𝐬𝐥𝐢𝐜𝐞𝐝﹕ 𝐜𝐥𝐚𝐬𝐬 𝐢𝐬 𝐚𝐝𝐝𝐞𝐝 𝐨𝐧 𝐚 𝐟𝐫𝐮𝐢𝐭 𝐰𝐡𝐞𝐧 𝐢𝐭 𝐢𝐬 𝐛𝐞𝐢𝐧𝐠 𝐬𝐥𝐢𝐜𝐞𝐝. 𝐓𝐡𝐚𝐭 𝐰𝐢𝐥𝐥 𝐜𝐚𝐥𝐥 𝐭𝐡𝐞 𝐬𝐥𝐢𝐜𝐞𝐄𝐟𝐟𝐞𝐜𝐭 𝐚𝐧𝐢𝐦𝐚𝐭𝐢𝐨𝐧.
+@𝐤𝐞𝐲𝐟𝐫𝐚𝐦𝐞𝐬 𝐬𝐥𝐢𝐜𝐞𝐄𝐟𝐟𝐞𝐜𝐭﹕ 𝐓𝐡𝐢𝐬 𝐝𝐞𝐟𝐢𝐧𝐞𝐬 𝐭𝐡𝐞 𝐚𝐧𝐢𝐦𝐚𝐭𝐢𝐨𝐧 𝐭𝐨 𝐛𝐞 𝐮𝐬𝐞𝐝 𝐟𝐨𝐫 𝐬𝐥𝐢𝐜𝐞𝐝 𝐟𝐫𝐮𝐢𝐭.
+𝟎﹪ 𝐓𝐡𝐞 𝐟𝐫𝐮𝐢𝐭 𝐬𝐭𝐚𝐫𝐭 𝐟𝐫𝐨𝐦 𝐭𝐡𝐞 𝐧𝐨𝐫𝐦𝐚𝐥 𝐬𝐢𝐳𝐞 𝐰𝐡𝐢𝐜𝐡 𝐢𝐬 𝐬𝐜𝐚𝐥𝐞⁽𝟏⁾.
+𝟓𝟎﹪﹕ 𝐓𝐡𝐞 𝐟𝐫𝐮𝐢𝐭 𝐬𝐜𝐚𝐥𝐞𝐬 𝐝𝐨𝐰𝐧 𝐚 𝐥𝐢𝐭𝐭𝐥𝐞 𝐭𝐨 𝟖𝟎﹪ ⁽𝐬𝐜𝐚𝐥𝐞⁽𝟎.𝟖⁾⁾ 𝐚𝐧𝐝 𝐫𝐨𝐭𝐚𝐭𝐞𝐬 𝐛𝐲 𝟏𝟓 𝐝𝐞𝐠𝐫𝐞𝐞𝐬 𝐟𝐨𝐫 𝐭𝐡𝐞 𝐜𝐮𝐭𝐭𝐢𝐧𝐠 𝐦𝐨𝐭𝐢𝐨𝐧.
+𝟏𝟎𝟎﹪﹕ 𝐅𝐫𝐮𝐢𝐭 𝐬𝐜𝐚𝐥𝐞𝐬 𝐝𝐨𝐰𝐧 𝐭𝐨 𝟎 𝐚𝐧𝐝 𝐫𝐨𝐭𝐚𝐭𝐞𝐬 𝐢𝐧 𝐭𝐡𝐞 𝐨𝐩𝐩𝐨𝐬𝐢𝐭𝐞 𝐝𝐢𝐫𝐞𝐜𝐭𝐢𝐨𝐧 ⁽𝐫𝐨𝐭𝐚𝐭𝐞⁽⁻𝟏𝟓𝐝𝐞𝐠⁾⁾ 𝐟𝐚𝐝𝐞𝐬 𝐨𝐮𝐭 ⁽𝐨𝐩𝐚𝐜𝐢𝐭𝐲﹕ 𝟎⁾ 𝐬𝐢𝐦𝐮𝐥𝐚𝐭𝐞𝐬 𝐟𝐫𝐮𝐢𝐭 𝐝𝐢𝐬𝐚𝐩𝐩𝐞𝐚𝐫𝐚𝐧𝐜𝐞 𝐚𝐟𝐭𝐞𝐫 𝐢𝐭𝐬 𝐬𝐥𝐢𝐜𝐢𝐧𝐠.
  
-7. End Game Styling ->
-position: absolute;: The end game container will be set absolutely within the #gameArea, so it can become centered on the screen.
-top: 50%; left: 50%; transform: translate(-50%, -50%);: These properties vertically and horizontally center the #endGame element inside the game area.
-text-align: center;: Aligns the text inside the end game container to the center.
-background-color: rgba(255, 255, 255, 0.9);: Changes the end game message's background color to semi-transparent white so that the view will be readable.
-padding: 20px;: Adds padding on all sides of the content in the end game box.
-border-radius: 10px;ποίησηarthBorders the corners of the end game container to make it look shiny.
-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); adds a subtle shadow around the end game box to create depth and separate it from the rest.
+𝟕. 𝐄𝐧𝐝 𝐆𝐚𝐦𝐞 𝐒𝐭𝐲𝐥𝐢𝐧𝐠 
+𝐩𝐨𝐬𝐢𝐭𝐢𝐨𝐧﹕ 𝐚𝐛𝐬𝐨𝐥𝐮𝐭𝐞﹔﹕ 𝐓𝐡𝐞 𝐞𝐧𝐝 𝐠𝐚𝐦𝐞 𝐜𝐨𝐧𝐭𝐚𝐢𝐧𝐞𝐫 𝐰𝐢𝐥𝐥 𝐛𝐞 𝐬𝐞𝐭 𝐚𝐛𝐬𝐨𝐥𝐮𝐭𝐞𝐥𝐲 𝐰𝐢𝐭𝐡𝐢𝐧 𝐭𝐡𝐞 #𝐠𝐚𝐦𝐞𝐀𝐫𝐞𝐚, 𝐬𝐨 𝐢𝐭 𝐜𝐚𝐧 𝐛𝐞𝐜𝐨𝐦𝐞 𝐜𝐞𝐧𝐭𝐞𝐫𝐞𝐝 𝐨𝐧 𝐭𝐡𝐞 𝐬𝐜𝐫𝐞𝐞𝐧.
+𝐭𝐨𝐩﹕ 𝟓𝟎﹪﹔ 𝐥𝐞𝐟𝐭﹕ 𝟓𝟎﹪﹔ 𝐭𝐫𝐚𝐧𝐬𝐟𝐨𝐫𝐦﹕ 𝐭𝐫𝐚𝐧𝐬𝐥𝐚𝐭𝐞⁽⁻𝟓𝟎﹪, ⁻𝟓𝟎﹪⁾﹔﹕ 𝐓𝐡𝐞𝐬𝐞 𝐩𝐫𝐨𝐩𝐞𝐫𝐭𝐢𝐞𝐬 𝐯𝐞𝐫𝐭𝐢𝐜𝐚𝐥𝐥𝐲 𝐚𝐧𝐝 𝐡𝐨𝐫𝐢𝐳𝐨𝐧𝐭𝐚𝐥𝐥𝐲 𝐜𝐞𝐧𝐭𝐞𝐫 𝐭𝐡𝐞 #𝐞𝐧𝐝𝐆𝐚𝐦𝐞 𝐞𝐥𝐞𝐦𝐞𝐧𝐭 𝐢𝐧𝐬𝐢𝐝𝐞 𝐭𝐡𝐞 𝐠𝐚𝐦𝐞 𝐚𝐫𝐞𝐚.
+𝐭𝐞𝐱𝐭⁻𝐚𝐥𝐢𝐠𝐧﹕ 𝐜𝐞𝐧𝐭𝐞𝐫﹔﹕ 𝐀𝐥𝐢𝐠𝐧𝐬 𝐭𝐡𝐞 𝐭𝐞𝐱𝐭 𝐢𝐧𝐬𝐢𝐝𝐞 𝐭𝐡𝐞 𝐞𝐧𝐝 𝐠𝐚𝐦𝐞 𝐜𝐨𝐧𝐭𝐚𝐢𝐧𝐞𝐫 𝐭𝐨 𝐭𝐡𝐞 𝐜𝐞𝐧𝐭𝐞𝐫.
+𝐛𝐚𝐜𝐤𝐠𝐫𝐨𝐮𝐧𝐝⁻𝐜𝐨𝐥𝐨𝐫﹕ 𝐫𝐠𝐛𝐚⁽𝟐𝟓𝟓, 𝟐𝟓𝟓, 𝟐𝟓𝟓, 𝟎.𝟗⁾﹔﹕ 𝐂𝐡𝐚𝐧𝐠𝐞𝐬 𝐭𝐡𝐞 𝐞𝐧𝐝 𝐠𝐚𝐦𝐞 𝐦𝐞𝐬𝐬𝐚𝐠𝐞'𝐬 𝐛𝐚𝐜𝐤𝐠𝐫𝐨𝐮𝐧𝐝 𝐜𝐨𝐥𝐨𝐫 𝐭𝐨 𝐬𝐞𝐦𝐢⁻𝐭𝐫𝐚𝐧𝐬𝐩𝐚𝐫𝐞𝐧𝐭 𝐰𝐡𝐢𝐭𝐞 𝐬𝐨 𝐭𝐡𝐚𝐭 𝐭𝐡𝐞 𝐯𝐢𝐞𝐰 𝐰𝐢𝐥𝐥 𝐛𝐞 𝐫𝐞𝐚𝐝𝐚𝐛𝐥𝐞.
+𝐩𝐚𝐝𝐝𝐢𝐧𝐠﹕ 𝟐𝟎𝐩𝐱﹔﹕ 𝐀𝐝𝐝𝐬 𝐩𝐚𝐝𝐝𝐢𝐧𝐠 𝐨𝐧 𝐚𝐥𝐥 𝐬𝐢𝐝𝐞𝐬 𝐨𝐟 𝐭𝐡𝐞 𝐜𝐨𝐧𝐭𝐞𝐧𝐭 𝐢𝐧 𝐭𝐡𝐞 𝐞𝐧𝐝 𝐠𝐚𝐦𝐞 𝐛𝐨𝐱.
+𝐛𝐨𝐫𝐝𝐞𝐫⁻𝐫𝐚𝐝𝐢𝐮𝐬﹕ 𝟏𝟎𝐩𝐱﹔ποίηση𝐚𝐫𝐭𝐡𝐁𝐨𝐫𝐝𝐞𝐫𝐬 𝐭𝐡𝐞 𝐜𝐨𝐫𝐧𝐞𝐫𝐬 𝐨𝐟 𝐭𝐡𝐞 𝐞𝐧𝐝 𝐠𝐚𝐦𝐞 𝐜𝐨𝐧𝐭𝐚𝐢𝐧𝐞𝐫 𝐭𝐨 𝐦𝐚𝐤𝐞 𝐢𝐭 𝐥𝐨𝐨𝐤 𝐬𝐡𝐢𝐧𝐲.
+𝐛𝐨𝐱⁻𝐬𝐡𝐚𝐝𝐨𝐰﹕ 𝟎 𝟎 𝟏𝟎𝐩𝐱 𝐫𝐠𝐛𝐚⁽𝟎, 𝟎, 𝟎, 𝟎.𝟓⁾﹔ 𝐚𝐝𝐝𝐬 𝐚 𝐬𝐮𝐛𝐭𝐥𝐞 𝐬𝐡𝐚𝐝𝐨𝐰 𝐚𝐫𝐨𝐮𝐧𝐝 𝐭𝐡𝐞 𝐞𝐧𝐝 𝐠𝐚𝐦𝐞 𝐛𝐨𝐱 𝐭𝐨 𝐜𝐫𝐞𝐚𝐭𝐞 𝐝𝐞𝐩𝐭𝐡 𝐚𝐧𝐝 𝐬𝐞𝐩𝐚𝐫𝐚𝐭𝐞 𝐢𝐭 𝐟𝐫𝐨𝐦 𝐭𝐡𝐞 𝐫𝐞𝐬𝐭.
 
-8. Hidden Class ->
-.hidden: Utility class to hide elements: When added to an element, such as the #endGame section, it makes the element invisible and avoids the element's space in the layout.
- This class is used initially to hide the end game message
+𝟖. 𝐇𝐢𝐝𝐝𝐞𝐧 𝐂𝐥𝐚𝐬𝐬 
+.𝐡𝐢𝐝𝐝𝐞𝐧﹕ 𝐔𝐭𝐢𝐥𝐢𝐭𝐲 𝐜𝐥𝐚𝐬𝐬 𝐭𝐨 𝐡𝐢𝐝𝐞 𝐞𝐥𝐞𝐦𝐞𝐧𝐭𝐬﹕ 𝐖𝐡𝐞𝐧 𝐚𝐝𝐝𝐞𝐝 𝐭𝐨 𝐚𝐧 𝐞𝐥𝐞𝐦𝐞𝐧𝐭, 𝐬𝐮𝐜𝐡 𝐚𝐬 𝐭𝐡𝐞 #𝐞𝐧𝐝𝐆𝐚𝐦𝐞 𝐬𝐞𝐜𝐭𝐢𝐨𝐧, 𝐢𝐭 𝐦𝐚𝐤𝐞𝐬 𝐭𝐡𝐞 𝐞𝐥𝐞𝐦𝐞𝐧𝐭 𝐢𝐧𝐯𝐢𝐬𝐢𝐛𝐥𝐞 𝐚𝐧𝐝 𝐚𝐯𝐨𝐢𝐝𝐬 𝐭𝐡𝐞 𝐞𝐥𝐞𝐦𝐞𝐧𝐭'𝐬 𝐬𝐩𝐚𝐜𝐞 𝐢𝐧 𝐭𝐡𝐞 𝐥𝐚𝐲𝐨𝐮𝐭.
+ 𝐓𝐡𝐢𝐬 𝐜𝐥𝐚𝐬𝐬 𝐢𝐬 𝐮𝐬𝐞𝐝 𝐢𝐧𝐢𝐭𝐢𝐚𝐥𝐥𝐲 𝐭𝐨 𝐡𝐢𝐝𝐞 𝐭𝐡𝐞 𝐞𝐧𝐝 𝐠𝐚𝐦𝐞 𝐦𝐞𝐬𝐬𝐚𝐠𝐞
  
 
-Technical Documentation for Fruit Fade Out Game JavaScript
-This JavaScript file contains the core logic of the Fruit Slicing Game, such as initializing the game, generating fruits, managing scores and times, fruit slice mechanisms, background music control, functionalities to restart games, and handle-screen game over.
+𝐓𝐞𝐜𝐡𝐧𝐢𝐜𝐚𝐥 𝐃𝐨𝐜𝐮𝐦𝐞𝐧𝐭𝐚𝐭𝐢𝐨𝐧 𝐟𝐨𝐫 𝐅𝐫𝐮𝐢𝐭 𝐅𝐚𝐝𝐞 𝐎𝐮𝐭 𝐆𝐚𝐦𝐞 𝐉𝐚𝐯𝐚𝐒𝐜𝐫𝐢𝐩𝐭
+𝐓𝐡𝐢𝐬 𝐉𝐚𝐯𝐚𝐒𝐜𝐫𝐢𝐩𝐭 𝐟𝐢𝐥𝐞 𝐜𝐨𝐧𝐭𝐚𝐢𝐧𝐬 𝐭𝐡𝐞 𝐜𝐨𝐫𝐞 𝐥𝐨𝐠𝐢𝐜 𝐨𝐟 𝐭𝐡𝐞 𝐅𝐫𝐮𝐢𝐭 𝐒𝐥𝐢𝐜𝐢𝐧𝐠 𝐆𝐚𝐦𝐞, 𝐬𝐮𝐜𝐡 𝐚𝐬 𝐢𝐧𝐢𝐭𝐢𝐚𝐥𝐢𝐳𝐢𝐧𝐠 𝐭𝐡𝐞 𝐠𝐚𝐦𝐞, 𝐠𝐞𝐧𝐞𝐫𝐚𝐭𝐢𝐧𝐠 𝐟𝐫𝐮𝐢𝐭𝐬, 𝐦𝐚𝐧𝐚𝐠𝐢𝐧𝐠 𝐬𝐜𝐨𝐫𝐞𝐬 𝐚𝐧𝐝 𝐭𝐢𝐦𝐞𝐬, 𝐟𝐫𝐮𝐢𝐭 𝐬𝐥𝐢𝐜𝐞 𝐦𝐞𝐜𝐡𝐚𝐧𝐢𝐬𝐦𝐬, 𝐛𝐚𝐜𝐤𝐠𝐫𝐨𝐮𝐧𝐝 𝐦𝐮𝐬𝐢𝐜 𝐜𝐨𝐧𝐭𝐫𝐨𝐥, 𝐟𝐮𝐧𝐜𝐭𝐢𝐨𝐧𝐚𝐥𝐢𝐭𝐢𝐞𝐬 𝐭𝐨 𝐫𝐞𝐬𝐭𝐚𝐫𝐭 𝐠𝐚𝐦𝐞𝐬, 𝐚𝐧𝐝 𝐡𝐚𝐧𝐝𝐥𝐞⁻𝐬𝐜𝐫𝐞𝐞𝐧 𝐠𝐚𝐦𝐞 𝐨𝐯𝐞𝐫.
 
-1. Global Variables and Constants ->
-fruits: A series of fruit emotes used to denote the various fruits in the game. These will be randomly selected and appear on-screen in this game.
-score: A variable that tracks the score of the player. The score begins at 0 and incrementally rises each time a fruit is sliced.
-timeLeft: A variable to track the remaining time in the game. It begins at 30 seconds and decreases step by step, displaying the values on the screen down to 0.
-gameInterval: Holds a reference to the interval generating new fruits every so often.
-timerInterval: Keeps a reference to the interval updating the countdown timer every second.
+𝟏. 𝐆𝐥𝐨𝐛𝐚𝐥 𝐕𝐚𝐫𝐢𝐚𝐛𝐥𝐞𝐬 𝐚𝐧𝐝 𝐂𝐨𝐧𝐬𝐭𝐚𝐧𝐭𝐬 
+𝐟𝐫𝐮𝐢𝐭𝐬﹕ 𝐀 𝐬𝐞𝐫𝐢𝐞𝐬 𝐨𝐟 𝐟𝐫𝐮𝐢𝐭 𝐞𝐦𝐨𝐭𝐞𝐬 𝐮𝐬𝐞𝐝 𝐭𝐨 𝐝𝐞𝐧𝐨𝐭𝐞 𝐭𝐡𝐞 𝐯𝐚𝐫𝐢𝐨𝐮𝐬 𝐟𝐫𝐮𝐢𝐭𝐬 𝐢𝐧 𝐭𝐡𝐞 𝐠𝐚𝐦𝐞. 𝐓𝐡𝐞𝐬𝐞 𝐰𝐢𝐥𝐥 𝐛𝐞 𝐫𝐚𝐧𝐝𝐨𝐦𝐥𝐲 𝐬𝐞𝐥𝐞𝐜𝐭𝐞𝐝 𝐚𝐧𝐝 𝐚𝐩𝐩𝐞𝐚𝐫 𝐨𝐧⁻𝐬𝐜𝐫𝐞𝐞𝐧 𝐢𝐧 𝐭𝐡𝐢𝐬 𝐠𝐚𝐦𝐞.
+𝐬𝐜𝐨𝐫𝐞﹕ 𝐀 𝐯𝐚𝐫𝐢𝐚𝐛𝐥𝐞 𝐭𝐡𝐚𝐭 𝐭𝐫𝐚𝐜𝐤𝐬 𝐭𝐡𝐞 𝐬𝐜𝐨𝐫𝐞 𝐨𝐟 𝐭𝐡𝐞 𝐩𝐥𝐚𝐲𝐞𝐫. 𝐓𝐡𝐞 𝐬𝐜𝐨𝐫𝐞 𝐛𝐞𝐠𝐢𝐧𝐬 𝐚𝐭 𝟎 𝐚𝐧𝐝 𝐢𝐧𝐜𝐫𝐞𝐦𝐞𝐧𝐭𝐚𝐥𝐥𝐲 𝐫𝐢𝐬𝐞𝐬 𝐞𝐚𝐜𝐡 𝐭𝐢𝐦𝐞 𝐚 𝐟𝐫𝐮𝐢𝐭 𝐢𝐬 𝐬𝐥𝐢𝐜𝐞𝐝.
+𝐭𝐢𝐦𝐞𝐋𝐞𝐟𝐭﹕ 𝐀 𝐯𝐚𝐫𝐢𝐚𝐛𝐥𝐞 𝐭𝐨 𝐭𝐫𝐚𝐜𝐤 𝐭𝐡𝐞 𝐫𝐞𝐦𝐚𝐢𝐧𝐢𝐧𝐠 𝐭𝐢𝐦𝐞 𝐢𝐧 𝐭𝐡𝐞 𝐠𝐚𝐦𝐞. 𝐈𝐭 𝐛𝐞𝐠𝐢𝐧𝐬 𝐚𝐭 𝟑𝟎 𝐬𝐞𝐜𝐨𝐧𝐝𝐬 𝐚𝐧𝐝 𝐝𝐞𝐜𝐫𝐞𝐚𝐬𝐞𝐬 𝐬𝐭𝐞𝐩 𝐛𝐲 𝐬𝐭𝐞𝐩, 𝐝𝐢𝐬𝐩𝐥𝐚𝐲𝐢𝐧𝐠 𝐭𝐡𝐞 𝐯𝐚𝐥𝐮𝐞𝐬 𝐨𝐧 𝐭𝐡𝐞 𝐬𝐜𝐫𝐞𝐞𝐧 𝐝𝐨𝐰𝐧 𝐭𝐨 𝟎.
+𝐠𝐚𝐦𝐞𝐈𝐧𝐭𝐞𝐫𝐯𝐚𝐥﹕ 𝐇𝐨𝐥𝐝𝐬 𝐚 𝐫𝐞𝐟𝐞𝐫𝐞𝐧𝐜𝐞 𝐭𝐨 𝐭𝐡𝐞 𝐢𝐧𝐭𝐞𝐫𝐯𝐚𝐥 𝐠𝐞𝐧𝐞𝐫𝐚𝐭𝐢𝐧𝐠 𝐧𝐞𝐰 𝐟𝐫𝐮𝐢𝐭𝐬 𝐞𝐯𝐞𝐫𝐲 𝐬𝐨 𝐨𝐟𝐭𝐞𝐧.
+𝐭𝐢𝐦𝐞𝐫𝐈𝐧𝐭𝐞𝐫𝐯𝐚𝐥﹕ 𝐊𝐞𝐞𝐩𝐬 𝐚 𝐫𝐞𝐟𝐞𝐫𝐞𝐧𝐜𝐞 𝐭𝐨 𝐭𝐡𝐞 𝐢𝐧𝐭𝐞𝐫𝐯𝐚𝐥 𝐮𝐩𝐝𝐚𝐭𝐢𝐧𝐠 𝐭𝐡𝐞 𝐜𝐨𝐮𝐧𝐭𝐝𝐨𝐰𝐧 𝐭𝐢𝐦𝐞𝐫 𝐞𝐯𝐞𝐫𝐲 𝐬𝐞𝐜𝐨𝐧𝐝.
 
-2. Utility Functions ->
-2.1 randomPosition: Generates a random position for the fruit within the game area.
+𝟐. 𝐔𝐭𝐢𝐥𝐢𝐭𝐲 𝐅𝐮𝐧𝐜𝐭𝐢𝐨𝐧𝐬 
+𝟐.𝟏 𝐫𝐚𝐧𝐝𝐨𝐦𝐏𝐨𝐬𝐢𝐭𝐢𝐨𝐧﹕ 𝐆𝐞𝐧𝐞𝐫𝐚𝐭𝐞𝐬 𝐚 𝐫𝐚𝐧𝐝𝐨𝐦 𝐩𝐨𝐬𝐢𝐭𝐢𝐨𝐧 𝐟𝐨𝐫 𝐭𝐡𝐞 𝐟𝐫𝐮𝐢𝐭 𝐰𝐢𝐭𝐡𝐢𝐧 𝐭𝐡𝐞 𝐠𝐚𝐦𝐞 𝐚𝐫𝐞𝐚.
 
-Purpose: To place fruits at random locations in the #gameArea.
-Logic: The x and y positions are generated using Math.random() so that fruit will appear at a random position, with a 50px padding around the edges to avoid fruits being spawned off the screen.
-Returns: An object that contains two properties with the randomly generated x and y coordinates.
+𝐏𝐮𝐫𝐩𝐨𝐬𝐞﹕ 𝐓𝐨 𝐩𝐥𝐚𝐜𝐞 𝐟𝐫𝐮𝐢𝐭𝐬 𝐚𝐭 𝐫𝐚𝐧𝐝𝐨𝐦 𝐥𝐨𝐜𝐚𝐭𝐢𝐨𝐧𝐬 𝐢𝐧 𝐭𝐡𝐞 #𝐠𝐚𝐦𝐞𝐀𝐫𝐞𝐚.
+𝐋𝐨𝐠𝐢𝐜﹕ 𝐓𝐡𝐞 𝐱 𝐚𝐧𝐝 𝐲 𝐩𝐨𝐬𝐢𝐭𝐢𝐨𝐧𝐬 𝐚𝐫𝐞 𝐠𝐞𝐧𝐞𝐫𝐚𝐭𝐞𝐝 𝐮𝐬𝐢𝐧𝐠 𝐌𝐚𝐭𝐡.𝐫𝐚𝐧𝐝𝐨𝐦⁽⁾ 𝐬𝐨 𝐭𝐡𝐚𝐭 𝐟𝐫𝐮𝐢𝐭 𝐰𝐢𝐥𝐥 𝐚𝐩𝐩𝐞𝐚𝐫 𝐚𝐭 𝐚 𝐫𝐚𝐧𝐝𝐨𝐦 𝐩𝐨𝐬𝐢𝐭𝐢𝐨𝐧, 𝐰𝐢𝐭𝐡 𝐚 𝟓𝟎𝐩𝐱 𝐩𝐚𝐝𝐝𝐢𝐧𝐠 𝐚𝐫𝐨𝐮𝐧𝐝 𝐭𝐡𝐞 𝐞𝐝𝐠𝐞𝐬 𝐭𝐨 𝐚𝐯𝐨𝐢𝐝 𝐟𝐫𝐮𝐢𝐭𝐬 𝐛𝐞𝐢𝐧𝐠 𝐬𝐩𝐚𝐰𝐧𝐞𝐝 𝐨𝐟𝐟 𝐭𝐡𝐞 𝐬𝐜𝐫𝐞𝐞𝐧.
+𝐑𝐞𝐭𝐮𝐫𝐧𝐬﹕ 𝐀𝐧 𝐨𝐛𝐣𝐞𝐜𝐭 𝐭𝐡𝐚𝐭 𝐜𝐨𝐧𝐭𝐚𝐢𝐧𝐬 𝐭𝐰𝐨 𝐩𝐫𝐨𝐩𝐞𝐫𝐭𝐢𝐞𝐬 𝐰𝐢𝐭𝐡 𝐭𝐡𝐞 𝐫𝐚𝐧𝐝𝐨𝐦𝐥𝐲 𝐠𝐞𝐧𝐞𝐫𝐚𝐭𝐞𝐝 𝐱 𝐚𝐧𝐝 𝐲 𝐜𝐨𝐨𝐫𝐝𝐢𝐧𝐚𝐭𝐞𝐬.
 
-2.2 createFruit: creates a new fruit on the screen.
-Creates and places a new fruit element in the game area. The fruit is chosen randomly from the fruits array.
-Steps:
-Generate a random position with the randomPosition() function.
-Choose a random fruit emoji.
-Create the fruit element as a div with class fruit.
-Set the fruit's position with left and top CSS properties.
-An event listener is attached to the fruit to handle the click event (when the player slices the fruit).
-Fruit Slicing Logic:
-On click, the score will be incremented and shown. The slicing sound is played through playSliceSound(). Fruit pieces are generated with createFruitPieces(). After a short delay of 500 ms, the fruit element will be removed from the DOM. Another fruit is generated.
+𝟐.𝟐 𝐜𝐫𝐞𝐚𝐭𝐞𝐅𝐫𝐮𝐢𝐭﹕ 𝐜𝐫𝐞𝐚𝐭𝐞𝐬 𝐚 𝐧𝐞𝐰 𝐟𝐫𝐮𝐢𝐭 𝐨𝐧 𝐭𝐡𝐞 𝐬𝐜𝐫𝐞𝐞𝐧.
+𝐂𝐫𝐞𝐚𝐭𝐞𝐬 𝐚𝐧𝐝 𝐩𝐥𝐚𝐜𝐞𝐬 𝐚 𝐧𝐞𝐰 𝐟𝐫𝐮𝐢𝐭 𝐞𝐥𝐞𝐦𝐞𝐧𝐭 𝐢𝐧 𝐭𝐡𝐞 𝐠𝐚𝐦𝐞 𝐚𝐫𝐞𝐚. 𝐓𝐡𝐞 𝐟𝐫𝐮𝐢𝐭 𝐢𝐬 𝐜𝐡𝐨𝐬𝐞𝐧 𝐫𝐚𝐧𝐝𝐨𝐦𝐥𝐲 𝐟𝐫𝐨𝐦 𝐭𝐡𝐞 𝐟𝐫𝐮𝐢𝐭𝐬 𝐚𝐫𝐫𝐚𝐲.
+𝐒𝐭𝐞𝐩𝐬﹕
+𝐆𝐞𝐧𝐞𝐫𝐚𝐭𝐞 𝐚 𝐫𝐚𝐧𝐝𝐨𝐦 𝐩𝐨𝐬𝐢𝐭𝐢𝐨𝐧 𝐰𝐢𝐭𝐡 𝐭𝐡𝐞 𝐫𝐚𝐧𝐝𝐨𝐦𝐏𝐨𝐬𝐢𝐭𝐢𝐨𝐧⁽⁾ 𝐟𝐮𝐧𝐜𝐭𝐢𝐨𝐧.
+𝐂𝐡𝐨𝐨𝐬𝐞 𝐚 𝐫𝐚𝐧𝐝𝐨𝐦 𝐟𝐫𝐮𝐢𝐭 𝐞𝐦𝐨𝐣𝐢.
+𝐂𝐫𝐞𝐚𝐭𝐞 𝐭𝐡𝐞 𝐟𝐫𝐮𝐢𝐭 𝐞𝐥𝐞𝐦𝐞𝐧𝐭 𝐚𝐬 𝐚 𝐝𝐢𝐯 𝐰𝐢𝐭𝐡 𝐜𝐥𝐚𝐬𝐬 𝐟𝐫𝐮𝐢𝐭.
+𝐒𝐞𝐭 𝐭𝐡𝐞 𝐟𝐫𝐮𝐢𝐭'𝐬 𝐩𝐨𝐬𝐢𝐭𝐢𝐨𝐧 𝐰𝐢𝐭𝐡 𝐥𝐞𝐟𝐭 𝐚𝐧𝐝 𝐭𝐨𝐩 𝐂𝐒𝐒 𝐩𝐫𝐨𝐩𝐞𝐫𝐭𝐢𝐞𝐬.
+𝐀𝐧 𝐞𝐯𝐞𝐧𝐭 𝐥𝐢𝐬𝐭𝐞𝐧𝐞𝐫 𝐢𝐬 𝐚𝐭𝐭𝐚𝐜𝐡𝐞𝐝 𝐭𝐨 𝐭𝐡𝐞 𝐟𝐫𝐮𝐢𝐭 𝐭𝐨 𝐡𝐚𝐧𝐝𝐥𝐞 𝐭𝐡𝐞 𝐜𝐥𝐢𝐜𝐤 𝐞𝐯𝐞𝐧𝐭 ⁽𝐰𝐡𝐞𝐧 𝐭𝐡𝐞 𝐩𝐥𝐚𝐲𝐞𝐫 𝐬𝐥𝐢𝐜𝐞𝐬 𝐭𝐡𝐞 𝐟𝐫𝐮𝐢𝐭⁾.
+𝐅𝐫𝐮𝐢𝐭 𝐒𝐥𝐢𝐜𝐢𝐧𝐠 𝐋𝐨𝐠𝐢𝐜﹕
+𝐎𝐧 𝐜𝐥𝐢𝐜𝐤, 𝐭𝐡𝐞 𝐬𝐜𝐨𝐫𝐞 𝐰𝐢𝐥𝐥 𝐛𝐞 𝐢𝐧𝐜𝐫𝐞𝐦𝐞𝐧𝐭𝐞𝐝 𝐚𝐧𝐝 𝐬𝐡𝐨𝐰𝐧. 𝐓𝐡𝐞 𝐬𝐥𝐢𝐜𝐢𝐧𝐠 𝐬𝐨𝐮𝐧𝐝 𝐢𝐬 𝐩𝐥𝐚𝐲𝐞𝐝 𝐭𝐡𝐫𝐨𝐮𝐠𝐡 𝐩𝐥𝐚𝐲𝐒𝐥𝐢𝐜𝐞𝐒𝐨𝐮𝐧𝐝⁽⁾. 𝐅𝐫𝐮𝐢𝐭 𝐩𝐢𝐞𝐜𝐞𝐬 𝐚𝐫𝐞 𝐠𝐞𝐧𝐞𝐫𝐚𝐭𝐞𝐝 𝐰𝐢𝐭𝐡 𝐜𝐫𝐞𝐚𝐭𝐞𝐅𝐫𝐮𝐢𝐭𝐏𝐢𝐞𝐜𝐞𝐬⁽⁾. 𝐀𝐟𝐭𝐞𝐫 𝐚 𝐬𝐡𝐨𝐫𝐭 𝐝𝐞𝐥𝐚𝐲 𝐨𝐟 𝟓𝟎𝟎 𝐦𝐬, 𝐭𝐡𝐞 𝐟𝐫𝐮𝐢𝐭 𝐞𝐥𝐞𝐦𝐞𝐧𝐭 𝐰𝐢𝐥𝐥 𝐛𝐞 𝐫𝐞𝐦𝐨𝐯𝐞𝐝 𝐟𝐫𝐨𝐦 𝐭𝐡𝐞 𝐃𝐎𝐌. 𝐀𝐧𝐨𝐭𝐡𝐞𝐫 𝐟𝐫𝐮𝐢𝐭 𝐢𝐬 𝐠𝐞𝐧𝐞𝐫𝐚𝐭𝐞𝐝.
 
-2.3 createFruitPieces: Creates sliced fruit pieces when a fruit is clicked.
-Purpose: Simulates the slicing effect by creating fruit pieces that scatter after the fruit is clicked.
-Steps:
-For each slice (3 pieces by default), a new div is created to represent a piece of the fruit.
-The position of each piece is randomized slightly around the original fruit's position.
-The transform property helps generate movement and rotation of the pieces of fruit.
-Fade out with opacity changes.
-Remove the pieces from the DOM after 1 second.
+𝟐.𝟑 𝐜𝐫𝐞𝐚𝐭𝐞𝐅𝐫𝐮𝐢𝐭𝐏𝐢𝐞𝐜𝐞𝐬﹕ 𝐂𝐫𝐞𝐚𝐭𝐞𝐬 𝐬𝐥𝐢𝐜𝐞𝐝 𝐟𝐫𝐮𝐢𝐭 𝐩𝐢𝐞𝐜𝐞𝐬 𝐰𝐡𝐞𝐧 𝐚 𝐟𝐫𝐮𝐢𝐭 𝐢𝐬 𝐜𝐥𝐢𝐜𝐤𝐞𝐝.
+𝐏𝐮𝐫𝐩𝐨𝐬𝐞﹕ 𝐒𝐢𝐦𝐮𝐥𝐚𝐭𝐞𝐬 𝐭𝐡𝐞 𝐬𝐥𝐢𝐜𝐢𝐧𝐠 𝐞𝐟𝐟𝐞𝐜𝐭 𝐛𝐲 𝐜𝐫𝐞𝐚𝐭𝐢𝐧𝐠 𝐟𝐫𝐮𝐢𝐭 𝐩𝐢𝐞𝐜𝐞𝐬 𝐭𝐡𝐚𝐭 𝐬𝐜𝐚𝐭𝐭𝐞𝐫 𝐚𝐟𝐭𝐞𝐫 𝐭𝐡𝐞 𝐟𝐫𝐮𝐢𝐭 𝐢𝐬 𝐜𝐥𝐢𝐜𝐤𝐞𝐝.
+𝐒𝐭𝐞𝐩𝐬﹕
+𝐅𝐨𝐫 𝐞𝐚𝐜𝐡 𝐬𝐥𝐢𝐜𝐞 ⁽𝟑 𝐩𝐢𝐞𝐜𝐞𝐬 𝐛𝐲 𝐝𝐞𝐟𝐚𝐮𝐥𝐭⁾, 𝐚 𝐧𝐞𝐰 𝐝𝐢𝐯 𝐢𝐬 𝐜𝐫𝐞𝐚𝐭𝐞𝐝 𝐭𝐨 𝐫𝐞𝐩𝐫𝐞𝐬𝐞𝐧𝐭 𝐚 𝐩𝐢𝐞𝐜𝐞 𝐨𝐟 𝐭𝐡𝐞 𝐟𝐫𝐮𝐢𝐭.
+𝐓𝐡𝐞 𝐩𝐨𝐬𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝐞𝐚𝐜𝐡 𝐩𝐢𝐞𝐜𝐞 𝐢𝐬 𝐫𝐚𝐧𝐝𝐨𝐦𝐢𝐳𝐞𝐝 𝐬𝐥𝐢𝐠𝐡𝐭𝐥𝐲 𝐚𝐫𝐨𝐮𝐧𝐝 𝐭𝐡𝐞 𝐨𝐫𝐢𝐠𝐢𝐧𝐚𝐥 𝐟𝐫𝐮𝐢𝐭'𝐬 𝐩𝐨𝐬𝐢𝐭𝐢𝐨𝐧.
+𝐓𝐡𝐞 𝐭𝐫𝐚𝐧𝐬𝐟𝐨𝐫𝐦 𝐩𝐫𝐨𝐩𝐞𝐫𝐭𝐲 𝐡𝐞𝐥𝐩𝐬 𝐠𝐞𝐧𝐞𝐫𝐚𝐭𝐞 𝐦𝐨𝐯𝐞𝐦𝐞𝐧𝐭 𝐚𝐧𝐝 𝐫𝐨𝐭𝐚𝐭𝐢𝐨𝐧 𝐨𝐟 𝐭𝐡𝐞 𝐩𝐢𝐞𝐜𝐞𝐬 𝐨𝐟 𝐟𝐫𝐮𝐢𝐭.
+𝐅𝐚𝐝𝐞 𝐨𝐮𝐭 𝐰𝐢𝐭𝐡 𝐨𝐩𝐚𝐜𝐢𝐭𝐲 𝐜𝐡𝐚𝐧𝐠𝐞𝐬.
+𝐑𝐞𝐦𝐨𝐯𝐞 𝐭𝐡𝐞 𝐩𝐢𝐞𝐜𝐞𝐬 𝐟𝐫𝐨𝐦 𝐭𝐡𝐞 𝐃𝐎𝐌 𝐚𝐟𝐭𝐞𝐫 𝟏 𝐬𝐞𝐜𝐨𝐧𝐝.
 
-3. Game Control Functions ->
-3.1 startGame: Setups and starts the game.
+𝟑. 𝐆𝐚𝐦𝐞 𝐂𝐨𝐧𝐭𝐫𝐨𝐥 𝐅𝐮𝐧𝐜𝐭𝐢𝐨𝐧𝐬 
+𝟑.𝟏 𝐬𝐭𝐚𝐫𝐭𝐆𝐚𝐦𝐞﹕ 𝐒𝐞𝐭𝐮𝐩𝐬 𝐚𝐧𝐝 𝐬𝐭𝐚𝐫𝐭𝐬 𝐭𝐡𝐞 𝐠𝐚𝐦𝐞.
    
-Purpose: Initialize the game by setting the initial score and time, and then set up the intervals that handle the fruits and the updating of the timer.
-Steps:
-The score and time left are reset to 0 and 30 respectively.
-The #endGame section is hidden at the start.
-A fruit is created immediately using createFruit().
-gameInterval is set to create a new fruit every 2 seconds.
-timerInterval is set to update the timer every second using updateTimer().
-The background music starts playing using playBackgroundMusic().
+𝐏𝐮𝐫𝐩𝐨𝐬𝐞﹕ 𝐈𝐧𝐢𝐭𝐢𝐚𝐥𝐢𝐳𝐞 𝐭𝐡𝐞 𝐠𝐚𝐦𝐞 𝐛𝐲 𝐬𝐞𝐭𝐭𝐢𝐧𝐠 𝐭𝐡𝐞 𝐢𝐧𝐢𝐭𝐢𝐚𝐥 𝐬𝐜𝐨𝐫𝐞 𝐚𝐧𝐝 𝐭𝐢𝐦𝐞, 𝐚𝐧𝐝 𝐭𝐡𝐞𝐧 𝐬𝐞𝐭 𝐮𝐩 𝐭𝐡𝐞 𝐢𝐧𝐭𝐞𝐫𝐯𝐚𝐥𝐬 𝐭𝐡𝐚𝐭 𝐡𝐚𝐧𝐝𝐥𝐞 𝐭𝐡𝐞 𝐟𝐫𝐮𝐢𝐭𝐬 𝐚𝐧𝐝 𝐭𝐡𝐞 𝐮𝐩𝐝𝐚𝐭𝐢𝐧𝐠 𝐨𝐟 𝐭𝐡𝐞 𝐭𝐢𝐦𝐞𝐫.
+𝐒𝐭𝐞𝐩𝐬﹕
+𝐓𝐡𝐞 𝐬𝐜𝐨𝐫𝐞 𝐚𝐧𝐝 𝐭𝐢𝐦𝐞 𝐥𝐞𝐟𝐭 𝐚𝐫𝐞 𝐫𝐞𝐬𝐞𝐭 𝐭𝐨 𝟎 𝐚𝐧𝐝 𝟑𝟎 𝐫𝐞𝐬𝐩𝐞𝐜𝐭𝐢𝐯𝐞𝐥𝐲.
+𝐓𝐡𝐞 #𝐞𝐧𝐝𝐆𝐚𝐦𝐞 𝐬𝐞𝐜𝐭𝐢𝐨𝐧 𝐢𝐬 𝐡𝐢𝐝𝐝𝐞𝐧 𝐚𝐭 𝐭𝐡𝐞 𝐬𝐭𝐚𝐫𝐭.
+𝐀 𝐟𝐫𝐮𝐢𝐭 𝐢𝐬 𝐜𝐫𝐞𝐚𝐭𝐞𝐝 𝐢𝐦𝐦𝐞𝐝𝐢𝐚𝐭𝐞𝐥𝐲 𝐮𝐬𝐢𝐧𝐠 𝐜𝐫𝐞𝐚𝐭𝐞𝐅𝐫𝐮𝐢𝐭⁽⁾.
+𝐠𝐚𝐦𝐞𝐈𝐧𝐭𝐞𝐫𝐯𝐚𝐥 𝐢𝐬 𝐬𝐞𝐭 𝐭𝐨 𝐜𝐫𝐞𝐚𝐭𝐞 𝐚 𝐧𝐞𝐰 𝐟𝐫𝐮𝐢𝐭 𝐞𝐯𝐞𝐫𝐲 𝟐 𝐬𝐞𝐜𝐨𝐧𝐝𝐬.
+𝐭𝐢𝐦𝐞𝐫𝐈𝐧𝐭𝐞𝐫𝐯𝐚𝐥 𝐢𝐬 𝐬𝐞𝐭 𝐭𝐨 𝐮𝐩𝐝𝐚𝐭𝐞 𝐭𝐡𝐞 𝐭𝐢𝐦𝐞𝐫 𝐞𝐯𝐞𝐫𝐲 𝐬𝐞𝐜𝐨𝐧𝐝 𝐮𝐬𝐢𝐧𝐠 𝐮𝐩𝐝𝐚𝐭𝐞𝐓𝐢𝐦𝐞𝐫⁽⁾.
+𝐓𝐡𝐞 𝐛𝐚𝐜𝐤𝐠𝐫𝐨𝐮𝐧𝐝 𝐦𝐮𝐬𝐢𝐜 𝐬𝐭𝐚𝐫𝐭𝐬 𝐩𝐥𝐚𝐲𝐢𝐧𝐠 𝐮𝐬𝐢𝐧𝐠 𝐩𝐥𝐚𝐲𝐁𝐚𝐜𝐤𝐠𝐫𝐨𝐮𝐧𝐝𝐌𝐮𝐬𝐢𝐜⁽⁾.
 
-3.2 updateTimer: Updates the timer every second and ends the game when time is up.
-Purpose: Decrements the timeLeft by 1 every second and updates the displayed time. When the time runs out, the game ends.
-Steps:
-The timeLeft is decremented.
-The timer display is updated.
-If the timer reaches 0, the endGame() function is called.
+𝟑.𝟐 𝐮𝐩𝐝𝐚𝐭𝐞𝐓𝐢𝐦𝐞𝐫﹕ 𝐔𝐩𝐝𝐚𝐭𝐞𝐬 𝐭𝐡𝐞 𝐭𝐢𝐦𝐞𝐫 𝐞𝐯𝐞𝐫𝐲 𝐬𝐞𝐜𝐨𝐧𝐝 𝐚𝐧𝐝 𝐞𝐧𝐝𝐬 𝐭𝐡𝐞 𝐠𝐚𝐦𝐞 𝐰𝐡𝐞𝐧 𝐭𝐢𝐦𝐞 𝐢𝐬 𝐮𝐩.
+𝐏𝐮𝐫𝐩𝐨𝐬𝐞﹕ 𝐃𝐞𝐜𝐫𝐞𝐦𝐞𝐧𝐭𝐬 𝐭𝐡𝐞 𝐭𝐢𝐦𝐞𝐋𝐞𝐟𝐭 𝐛𝐲 𝟏 𝐞𝐯𝐞𝐫𝐲 𝐬𝐞𝐜𝐨𝐧𝐝 𝐚𝐧𝐝 𝐮𝐩𝐝𝐚𝐭𝐞𝐬 𝐭𝐡𝐞 𝐝𝐢𝐬𝐩𝐥𝐚𝐲𝐞𝐝 𝐭𝐢𝐦𝐞. 𝐖𝐡𝐞𝐧 𝐭𝐡𝐞 𝐭𝐢𝐦𝐞 𝐫𝐮𝐧𝐬 𝐨𝐮𝐭, 𝐭𝐡𝐞 𝐠𝐚𝐦𝐞 𝐞𝐧𝐝𝐬.
+𝐒𝐭𝐞𝐩𝐬﹕
+𝐓𝐡𝐞 𝐭𝐢𝐦𝐞𝐋𝐞𝐟𝐭 𝐢𝐬 𝐝𝐞𝐜𝐫𝐞𝐦𝐞𝐧𝐭𝐞𝐝.
+𝐓𝐡𝐞 𝐭𝐢𝐦𝐞𝐫 𝐝𝐢𝐬𝐩𝐥𝐚𝐲 𝐢𝐬 𝐮𝐩𝐝𝐚𝐭𝐞𝐝.
+𝐈𝐟 𝐭𝐡𝐞 𝐭𝐢𝐦𝐞𝐫 𝐫𝐞𝐚𝐜𝐡𝐞𝐬 𝟎, 𝐭𝐡𝐞 𝐞𝐧𝐝𝐆𝐚𝐦𝐞⁽⁾ 𝐟𝐮𝐧𝐜𝐭𝐢𝐨𝐧 𝐢𝐬 𝐜𝐚𝐥𝐥𝐞𝐝.
 
-3.3 endGame: Ends the game and displays the final score.
-Purpose: Ends the game by stopping the fruit generation and timer intervals, and displays the final score.
-Steps:
-The gameInterval and timerInterval are cleared to stop the creation of fruits and the timer updates.
-The last score is shown in the #finalScore element.
-The gameover screen #endGame is set visible by removing the class hidden.
-The background music will be stopped by using stopBackgroundMusic().
-3.4 restartGame: It will restart the game by resetting the game area by initiating a new game.
-Intent: Resets the game area and restarts the game
-Steps:
-All the fruit elements will be removed from the #fruits container.
-Start a new game by calling the startGame() function
+𝟑.𝟑 𝐞𝐧𝐝𝐆𝐚𝐦𝐞﹕ 𝐄𝐧𝐝𝐬 𝐭𝐡𝐞 𝐠𝐚𝐦𝐞 𝐚𝐧𝐝 𝐝𝐢𝐬𝐩𝐥𝐚𝐲𝐬 𝐭𝐡𝐞 𝐟𝐢𝐧𝐚𝐥 𝐬𝐜𝐨𝐫𝐞.
+𝐏𝐮𝐫𝐩𝐨𝐬𝐞﹕ 𝐄𝐧𝐝𝐬 𝐭𝐡𝐞 𝐠𝐚𝐦𝐞 𝐛𝐲 𝐬𝐭𝐨𝐩𝐩𝐢𝐧𝐠 𝐭𝐡𝐞 𝐟𝐫𝐮𝐢𝐭 𝐠𝐞𝐧𝐞𝐫𝐚𝐭𝐢𝐨𝐧 𝐚𝐧𝐝 𝐭𝐢𝐦𝐞𝐫 𝐢𝐧𝐭𝐞𝐫𝐯𝐚𝐥𝐬, 𝐚𝐧𝐝 𝐝𝐢𝐬𝐩𝐥𝐚𝐲𝐬 𝐭𝐡𝐞 𝐟𝐢𝐧𝐚𝐥 𝐬𝐜𝐨𝐫𝐞.
+𝐒𝐭𝐞𝐩𝐬﹕
+𝐓𝐡𝐞 𝐠𝐚𝐦𝐞𝐈𝐧𝐭𝐞𝐫𝐯𝐚𝐥 𝐚𝐧𝐝 𝐭𝐢𝐦𝐞𝐫𝐈𝐧𝐭𝐞𝐫𝐯𝐚𝐥 𝐚𝐫𝐞 𝐜𝐥𝐞𝐚𝐫𝐞𝐝 𝐭𝐨 𝐬𝐭𝐨𝐩 𝐭𝐡𝐞 𝐜𝐫𝐞𝐚𝐭𝐢𝐨𝐧 𝐨𝐟 𝐟𝐫𝐮𝐢𝐭𝐬 𝐚𝐧𝐝 𝐭𝐡𝐞 𝐭𝐢𝐦𝐞𝐫 𝐮𝐩𝐝𝐚𝐭𝐞𝐬.
+𝐓𝐡𝐞 𝐥𝐚𝐬𝐭 𝐬𝐜𝐨𝐫𝐞 𝐢𝐬 𝐬𝐡𝐨𝐰𝐧 𝐢𝐧 𝐭𝐡𝐞 #𝐟𝐢𝐧𝐚𝐥𝐒𝐜𝐨𝐫𝐞 𝐞𝐥𝐞𝐦𝐞𝐧𝐭.
+𝐓𝐡𝐞 𝐠𝐚𝐦𝐞𝐨𝐯𝐞𝐫 𝐬𝐜𝐫𝐞𝐞𝐧 #𝐞𝐧𝐝𝐆𝐚𝐦𝐞 𝐢𝐬 𝐬𝐞𝐭 𝐯𝐢𝐬𝐢𝐛𝐥𝐞 𝐛𝐲 𝐫𝐞𝐦𝐨𝐯𝐢𝐧𝐠 𝐭𝐡𝐞 𝐜𝐥𝐚𝐬𝐬 𝐡𝐢𝐝𝐝𝐞𝐧.
+𝐓𝐡𝐞 𝐛𝐚𝐜𝐤𝐠𝐫𝐨𝐮𝐧𝐝 𝐦𝐮𝐬𝐢𝐜 𝐰𝐢𝐥𝐥 𝐛𝐞 𝐬𝐭𝐨𝐩𝐩𝐞𝐝 𝐛𝐲 𝐮𝐬𝐢𝐧𝐠 𝐬𝐭𝐨𝐩𝐁𝐚𝐜𝐤𝐠𝐫𝐨𝐮𝐧𝐝𝐌𝐮𝐬𝐢𝐜⁽⁾.
+𝟑.𝟒 𝐫𝐞𝐬𝐭𝐚𝐫𝐭𝐆𝐚𝐦𝐞﹕ 𝐈𝐭 𝐰𝐢𝐥𝐥 𝐫𝐞𝐬𝐭𝐚𝐫𝐭 𝐭𝐡𝐞 𝐠𝐚𝐦𝐞 𝐛𝐲 𝐫𝐞𝐬𝐞𝐭𝐭𝐢𝐧𝐠 𝐭𝐡𝐞 𝐠𝐚𝐦𝐞 𝐚𝐫𝐞𝐚 𝐛𝐲 𝐢𝐧𝐢𝐭𝐢𝐚𝐭𝐢𝐧𝐠 𝐚 𝐧𝐞𝐰 𝐠𝐚𝐦𝐞.
+𝐈𝐧𝐭𝐞𝐧𝐭﹕ 𝐑𝐞𝐬𝐞𝐭𝐬 𝐭𝐡𝐞 𝐠𝐚𝐦𝐞 𝐚𝐫𝐞𝐚 𝐚𝐧𝐝 𝐫𝐞𝐬𝐭𝐚𝐫𝐭𝐬 𝐭𝐡𝐞 𝐠𝐚𝐦𝐞
+𝐒𝐭𝐞𝐩𝐬﹕
+𝐀𝐥𝐥 𝐭𝐡𝐞 𝐟𝐫𝐮𝐢𝐭 𝐞𝐥𝐞𝐦𝐞𝐧𝐭𝐬 𝐰𝐢𝐥𝐥 𝐛𝐞 𝐫𝐞𝐦𝐨𝐯𝐞𝐝 𝐟𝐫𝐨𝐦 𝐭𝐡𝐞 #𝐟𝐫𝐮𝐢𝐭𝐬 𝐜𝐨𝐧𝐭𝐚𝐢𝐧𝐞𝐫.
+𝐒𝐭𝐚𝐫𝐭 𝐚 𝐧𝐞𝐰 𝐠𝐚𝐦𝐞 𝐛𝐲 𝐜𝐚𝐥𝐥𝐢𝐧𝐠 𝐭𝐡𝐞 𝐬𝐭𝐚𝐫𝐭𝐆𝐚𝐦𝐞⁽⁾ 𝐟𝐮𝐧𝐜𝐭𝐢𝐨𝐧
 
-4. Sound and Music Functions ->
-4.1 playSliceSound
+𝟒. 𝐒𝐨𝐮𝐧𝐝 𝐚𝐧𝐝 𝐌𝐮𝐬𝐢𝐜 𝐅𝐮𝐧𝐜𝐭𝐢𝐨𝐧𝐬 
+𝟒.𝟏 𝐩𝐥𝐚𝐲𝐒𝐥𝐢𝐜𝐞𝐒𝐨𝐮𝐧𝐝
    
-Sound is played when a fruit is sliced
-Purpose: It plays the sound of slicing the fruit
-Steps:
-Audio is reset to the beginning (currentTime = 0)
-The sound is played using .play().
+𝐒𝐨𝐮𝐧𝐝 𝐢𝐬 𝐩𝐥𝐚𝐲𝐞𝐝 𝐰𝐡𝐞𝐧 𝐚 𝐟𝐫𝐮𝐢𝐭 𝐢𝐬 𝐬𝐥𝐢𝐜𝐞𝐝
+𝐏𝐮𝐫𝐩𝐨𝐬𝐞﹕ 𝐈𝐭 𝐩𝐥𝐚𝐲𝐬 𝐭𝐡𝐞 𝐬𝐨𝐮𝐧𝐝 𝐨𝐟 𝐬𝐥𝐢𝐜𝐢𝐧𝐠 𝐭𝐡𝐞 𝐟𝐫𝐮𝐢𝐭
+𝐒𝐭𝐞𝐩𝐬﹕
+𝐀𝐮𝐝𝐢𝐨 𝐢𝐬 𝐫𝐞𝐬𝐞𝐭 𝐭𝐨 𝐭𝐡𝐞 𝐛𝐞𝐠𝐢𝐧𝐧𝐢𝐧𝐠 ⁽𝐜𝐮𝐫𝐫𝐞𝐧𝐭𝐓𝐢𝐦𝐞 ⁼ 𝟎⁾
+𝐓𝐡𝐞 𝐬𝐨𝐮𝐧𝐝 𝐢𝐬 𝐩𝐥𝐚𝐲𝐞𝐝 𝐮𝐬𝐢𝐧𝐠 .𝐩𝐥𝐚𝐲⁽⁾.
 
-4.2 playBackgroundMusic
-Plays background music when the game starts.
-Purpose: Plays the background music when the game is started.
+𝟒.𝟐 𝐩𝐥𝐚𝐲𝐁𝐚𝐜𝐤𝐠𝐫𝐨𝐮𝐧𝐝𝐌𝐮𝐬𝐢𝐜
+𝐏𝐥𝐚𝐲𝐬 𝐛𝐚𝐜𝐤𝐠𝐫𝐨𝐮𝐧𝐝 𝐦𝐮𝐬𝐢𝐜 𝐰𝐡𝐞𝐧 𝐭𝐡𝐞 𝐠𝐚𝐦𝐞 𝐬𝐭𝐚𝐫𝐭𝐬.
+𝐏𝐮𝐫𝐩𝐨𝐬𝐞﹕ 𝐏𝐥𝐚𝐲𝐬 𝐭𝐡𝐞 𝐛𝐚𝐜𝐤𝐠𝐫𝐨𝐮𝐧𝐝 𝐦𝐮𝐬𝐢𝐜 𝐰𝐡𝐞𝐧 𝐭𝐡𝐞 𝐠𝐚𝐦𝐞 𝐢𝐬 𝐬𝐭𝐚𝐫𝐭𝐞𝐝.
 
-4.3 stopBackgroundMusic
-Stops background music when the game is over.
-Purpose: Stop the Background music when the game ends.
-Purpose: Initialize and start the game directly when page load by calling the function startGame().
+𝟒.𝟑 𝐬𝐭𝐨𝐩𝐁𝐚𝐜𝐤𝐠𝐫𝐨𝐮𝐧𝐝𝐌𝐮𝐬𝐢𝐜
+𝐒𝐭𝐨𝐩𝐬 𝐛𝐚𝐜𝐤𝐠𝐫𝐨𝐮𝐧𝐝 𝐦𝐮𝐬𝐢𝐜 𝐰𝐡𝐞𝐧 𝐭𝐡𝐞 𝐠𝐚𝐦𝐞 𝐢𝐬 𝐨𝐯𝐞𝐫.
+𝐏𝐮𝐫𝐩𝐨𝐬𝐞﹕ 𝐒𝐭𝐨𝐩 𝐭𝐡𝐞 𝐁𝐚𝐜𝐤𝐠𝐫𝐨𝐮𝐧𝐝 𝐦𝐮𝐬𝐢𝐜 𝐰𝐡𝐞𝐧 𝐭𝐡𝐞 𝐠𝐚𝐦𝐞 𝐞𝐧𝐝𝐬.
+𝐏𝐮𝐫𝐩𝐨𝐬𝐞﹕ 𝐈𝐧𝐢𝐭𝐢𝐚𝐥𝐢𝐳𝐞 𝐚𝐧𝐝 𝐬𝐭𝐚𝐫𝐭 𝐭𝐡𝐞 𝐠𝐚𝐦𝐞 𝐝𝐢𝐫𝐞𝐜𝐭𝐥𝐲 𝐰𝐡𝐞𝐧 𝐩𝐚𝐠𝐞 𝐥𝐨𝐚𝐝 𝐛𝐲 𝐜𝐚𝐥𝐥𝐢𝐧𝐠 𝐭𝐡𝐞 𝐟𝐮𝐧𝐜𝐭𝐢𝐨𝐧 𝐬𝐭𝐚𝐫𝐭𝐆𝐚𝐦𝐞⁽⁾.
